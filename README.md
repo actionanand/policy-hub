@@ -29,8 +29,8 @@ analytics, cookies, or tracking by default.
 
 ## Requirements
 
-- Node.js 22 or newer
-- npm 10 or newer
+- Node.js 24.16.0, pinned in `.nvmrc`
+- npm included with that Node.js release
 
 VitePress 1.6.4 is the latest stable release line. Pre-release VitePress 2
 versions are intentionally not used.
@@ -239,8 +239,19 @@ the generated sitemap URL to `docs/public/robots.txt` if desired.
 
 ## GitHub Pages deployment
 
-1. Push the repository to GitHub with `main` as the default branch.
-2. In **Settings → Pages**, choose **GitHub Actions** as the source.
+The workflow runs when the `master` branch is pushed and publishes the generated
+site to an orphan `gh-pages` branch.
+
+1. Push the repository to GitHub on the `master` branch. The first workflow run
+   creates the `gh-pages` branch.
+2. After that first run, open **Settings → Pages** and select:
+
+   ```text
+   Source: Deploy from a branch
+   Branch: gh-pages
+   Folder: / (root)
+   ```
+
 3. In **Settings → Secrets and variables → Actions → Variables**, optionally
    set:
 
@@ -248,23 +259,23 @@ the generated sitemap URL to `docs/public/robots.txt` if desired.
      derives this value from the repository name when it is not set.
    - `VITEPRESS_PRODUCTION_DOMAIN` to the deployed origin.
 
-4. Push to `main` or run the workflow manually.
+4. Push to `master` again or run the workflow manually whenever a deployment is
+   needed.
 
-The workflow type-checks and builds with:
+The workflow reads Node.js `24.16.0` directly from `.nvmrc`, installs the locked
+dependencies with `npm ci`, type-checks, and builds with:
 
 ```text
 npm run docs:build
 ```
 
-It uploads:
+It publishes:
 
 ```text
 docs/.vitepress/dist
 ```
 
-Commit the generated `package-lock.json` after the first local `npm install` for
-reproducible installs. You can then enable npm caching in `actions/setup-node`
-and change the workflow install step from `npm install` to `npm ci`.
+Keep `package-lock.json` committed so `npm ci` and dependency caching work.
 
 ### GitHub Pages refresh behaviour
 
@@ -279,7 +290,7 @@ Create a Cloudflare Pages project connected to the repository and use:
 Framework preset: None
 Build command: npm run docs:build
 Output directory: docs/.vitepress/dist
-Node version: 22 or newer
+Node version: 24.16.0 (from .nvmrc)
 ```
 
 Environment variables:
