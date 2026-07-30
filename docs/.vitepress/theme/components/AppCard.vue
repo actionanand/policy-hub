@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { withBase } from 'vitepress'
 import type { AppInfo } from '../../data/apps'
 
 const props = defineProps<{ app: AppInfo }>()
+const iconFailed = ref(false)
 
 const initials = computed(() =>
   props.app.name
@@ -19,7 +20,12 @@ const initials = computed(() =>
   <article class="app-card">
     <div class="app-card__heading">
       <div class="app-icon" aria-hidden="true">
-        <img v-if="app.icon" :src="withBase(app.icon)" alt="" />
+        <img
+          v-if="app.icon && !iconFailed"
+          :src="withBase(app.icon)"
+          alt=""
+          @error="iconFailed = true"
+        />
         <span v-else>{{ initials }}</span>
       </div>
       <div>
@@ -31,14 +37,12 @@ const initials = computed(() =>
     </div>
 
     <div class="app-card__links" :aria-label="`${app.name} resources`">
-      <a :href="withBase(app.privacyUrl)">Privacy</a>
-      <a v-if="app.termsUrl" :href="withBase(app.termsUrl)">Terms</a>
-      <a v-if="app.supportUrl" :href="withBase(app.supportUrl)">Support</a>
       <a
-        v-if="app.dataDeletionUrl"
-        :href="withBase(app.dataDeletionUrl)"
+        v-for="document in app.documents"
+        :key="document.id"
+        :href="withBase(document.portalUrl)"
       >
-        Data deletion
+        {{ document.navLabel || document.label }}
       </a>
     </div>
   </article>

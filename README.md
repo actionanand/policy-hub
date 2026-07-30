@@ -17,11 +17,11 @@ analytics, cookies, or tracking by default.
 - Centralized TypeScript configuration for apps and developer details
 - Local full-text search across app and legal pages
 - App filtering on the home page and application directory
-- Dedicated overview, privacy, terms, support, and data-deletion routes
-- Standalone privacy-policy routes suitable for Google Play Console
-- One shared Markdown policy source rendered in both privacy routes
-- Accessible copy button that copies the standalone URL, including a manual
-  fallback
+- Dedicated overview, privacy, terms, support, data-collection, data-deletion,
+  and app-contact routes
+- Isolated standalone routes for every app document
+- One shared Markdown source rendered in each portal/standalone route pair
+- Accessible copy buttons for every standalone URL, including a manual fallback
 - Clean URLs, optional canonical metadata, Open Graph metadata, robots.txt, and
   optional sitemap generation
 - GitHub Pages workflow and Cloudflare Pages-compatible output
@@ -108,22 +108,25 @@ is configured.
      id: 'new-app',
      name: 'New App',
      shortDescription: 'A short, factual description.',
+     icon: '/apps/new-app/icon.png',
      playStoreUrl: 'https://play.google.com/store/apps/details?id=...',
      githubUrl: 'https://github.com/...',
-     privacyUrl: '/apps/new-app/privacy',
-     standalonePrivacyUrl: '/privacy/new-app',
-     termsUrl: '/apps/new-app/terms',
-     supportUrl: '/apps/new-app/support',
-     dataDeletionUrl: '/apps/new-app/data-deletion'
+     documents: createDocuments('new-app')
    }
    ```
+
+   Omit `icon` until the image exists. The UI displays the first letter of the
+   app name when no icon is configured or when the configured image cannot be
+   loaded.
 
 2. Create shared Markdown in `docs/content/new-app/`:
 
    - `privacy.md`
    - `terms.md`
    - `support.md`
+   - `data-collection.md`
    - `data-deletion.md`
+   - `contact.md`
 
 3. Create portal pages in `docs/apps/new-app/`:
 
@@ -131,7 +134,9 @@ is configured.
    - `privacy.md`
    - `terms.md`
    - `support.md`
+   - `data-collection.md`
    - `data-deletion.md`
+   - `contact.md`
 
 4. In each portal document, include the matching shared source. For example,
    `docs/apps/new-app/privacy.md` uses:
@@ -140,21 +145,89 @@ is configured.
    <!--@include: ../../content/new-app/privacy.md-->
    ```
 
-5. Create `docs/privacy/new-app.md`, apply the standalone frontmatter used by
-   the existing apps, and include the same source:
+5. Create the standalone wrappers and apply the isolated frontmatter used by
+   the existing apps:
+
+   ```text
+   docs/privacy/new-app.md
+   docs/terms/new-app.md
+   docs/support/new-app.md
+   docs/data-collection/new-app.md
+   docs/data-deletion/new-app.md
+   docs/contact/new-app.md
+   ```
+
+   Each wrapper includes the corresponding shared source. For example:
 
    ```md
    <!--@include: ../content/new-app/privacy.md-->
    ```
 
-6. Add `<CopyPolicyUrl path="/privacy/new-app" />` to the portal privacy page.
-   Run the development site and confirm that the copied URL points to
-   `/privacy/new-app`, not `/apps/new-app/privacy`.
+6. Add a copy component to every portal document:
+
+   ```md
+   <CopyStandaloneUrl
+     path="/terms/new-app"
+     label="Copy standalone terms URL"
+     copied-label="Terms URL copied"
+     document-name="New App terms and conditions"
+   />
+   ```
+
+   The privacy page can retain the Google Play-specific label:
+
+   ```md
+   <CopyStandaloneUrl
+     path="/privacy/new-app"
+     label="Copy Play Store URL"
+     copied-label="Play Store URL copied"
+     document-name="New App privacy policy"
+   />
+   ```
 
 7. Run the type check and production build, then test direct navigation and a
-   browser refresh on both privacy routes.
+   browser refresh for every portal and standalone route.
 
-8. Submit only the standalone URL to Google Play Console.
+8. Submit only `/privacy/new-app` to the Google Play privacy-policy field. Use
+   the other standalone URLs wherever a direct document URL is required.
+
+## App icons
+
+Use this folder and filename convention:
+
+```text
+docs/public/apps/<app-id>/icon.png
+```
+
+For example:
+
+```text
+docs/public/apps/spendzo/icon.png
+docs/public/apps/stillora/icon.png
+```
+
+Then configure the public path in `docs/.vitepress/data/apps.ts`:
+
+```ts
+{
+  id: 'spendzo',
+  name: 'Spendzo',
+  shortDescription: 'A personal expense and budget-tracking application.',
+  icon: '/apps/spendzo/icon.png',
+  documents: createDocuments('spendzo')
+}
+```
+
+Recommendations:
+
+- Use the exact filename `icon.png` for consistency.
+- Use a square image, preferably `512 x 512` pixels.
+- PNG or WebP works well. If using WebP, name it `icon.webp` and update the
+  configured path.
+- Keep the file reasonably small because it appears in app cards and overview
+  pages.
+- Do not configure `icon` when no file exists. If the field is omitted, or if
+  the image fails to load, the app's initial is displayed automatically.
 
 ## How shared Markdown includes work
 
@@ -185,28 +258,35 @@ breadcrumbs, related resources, and copy control:
 /apps/spendzo/privacy
 ```
 
-The Google Play route contains only the policy document:
+Every portal document has a matching standalone route:
 
 ```text
-/privacy/spendzo
+/apps/spendzo/privacy        -> /privacy/spendzo
+/apps/spendzo/terms          -> /terms/spendzo
+/apps/spendzo/support        -> /support/spendzo
+/apps/spendzo/data-collection -> /data-collection/spendzo
+/apps/spendzo/data-deletion  -> /data-deletion/spendzo
+/apps/spendzo/contact        -> /contact/spendzo
 ```
 
-Its per-page frontmatter disables the navbar, sidebar, outline, footer,
+Each standalone page contains only its shared document. Its per-page
+frontmatter disables the navbar, sidebar, outline, footer,
 previous/next links, edit link, and updated timestamp. The page is static HTML,
 public, mobile responsive, readable without JavaScript, and print friendly.
 
-## Copy Play Store URL
+## Copy standalone URLs
 
-`CopyPolicyUrl.vue` builds the URL at interaction time using:
+`CopyStandaloneUrl.vue` builds each URL at interaction time using:
 
 - `window.location.origin`
 - VitePress `withBase`
-- The configured standalone policy path
+- The configured standalone document path
 
 This supports a root custom domain and a GitHub Pages repository base. The
 component uses the Clipboard API first, then a legacy copy fallback. If both are
 unavailable, it reveals a read-only URL field, focuses it, and selects it for
-manual copying. Status changes are announced through an ARIA live region.
+manual copying. Labels are configurable, and status changes are announced
+through an ARIA live region.
 
 ## Configurable base path
 

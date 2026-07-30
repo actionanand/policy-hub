@@ -11,16 +11,10 @@ const links = computed(() => {
   if (!app.value) return []
   return [
     { label: 'Overview', href: `/apps/${app.value.id}/` },
-    { label: 'Privacy', href: app.value.privacyUrl },
-    ...(app.value.termsUrl
-      ? [{ label: 'Terms', href: app.value.termsUrl }]
-      : []),
-    ...(app.value.supportUrl
-      ? [{ label: 'Support', href: app.value.supportUrl }]
-      : []),
-    ...(app.value.dataDeletionUrl
-      ? [{ label: 'Data deletion', href: app.value.dataDeletionUrl }]
-      : [])
+    ...app.value.documents.map((document) => ({
+      label: document.navLabel || document.label,
+      href: document.portalUrl
+    }))
   ]
 })
 
