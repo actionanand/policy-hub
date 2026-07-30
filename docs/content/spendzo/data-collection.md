@@ -1,45 +1,30 @@
 # Spendzo Data Collection
 
-> **Sample disclosure - review before publishing.** This page must match the
-> released app, its third-party SDKs, and the Google Play Data Safety form.
+**Last Updated:** July 30, 2026
 
-**Last reviewed:** [Month DD, YYYY]
+## Data entered and stored locally
 
-## Data accessed or entered
+Spendzo stores the financial and preference information you enter, including
+expenses, income, budgets, categories, notes, payment methods, tags, and
+security settings. This information stays in the app's private local database.
 
-Describe every data category Spendzo can access or receive, such as [expense
-entries], [budget amounts], [categories], [notes], [files selected for import],
-and [device or app information]. Remove categories that do not apply.
+## Data collected by the developer
 
-## Data collected off the device
+The developer does not collect:
 
-For every data category transmitted away from the device, specify:
+- Financial information entered in Spendzo
+- Personal details or account information
+- Device identifiers
+- App activity, diagnostics, or analytics
+- Location, contacts, photos, audio, or messages
 
-- The exact data type
-- Whether collection is required or optional
-- Why it is collected
-- Whether it is linked to the user
-- How long it is retained
+Spendzo has no account system, advertisements, trackers, or cloud sync. It does
+not send or share your data with third parties.
 
-If no data leaves the device, verify that statement against every production
-SDK and network request before publishing it.
+## Optional local features
 
-## Data shared with third parties
+Fingerprint unlock is processed by Android; Spendzo does not receive biometric
+templates. Backup, CSV, and PDF files are created locally only when you request
+them and are saved to a location you choose.
 
-List each recipient, the data shared, and the purpose. Include analytics,
-crash-reporting, advertising, backup, hosting, payment, and support providers
-when present.
-
-## Permissions connected to data
-
-List each Android permission that can expose or create data and explain why
-Spendzo requests it. The list must match the current Play Store build.
-
-## User controls
-
-Explain how users can view, export, correct, reset, or delete their information,
-including any actions that must be requested by email.
-
-## Contact
-
-Questions about Spendzo data practices can be sent to [Spendzo privacy email].
+For questions, email **anand.official.in@gmail.com**.

@@ -1,105 +1,88 @@
 # Privacy Policy for Spendzo
 
-> **Sample content — review before publishing.** This policy must match the
-> app’s real behaviour. The Google Play Console Data Safety form must match this
-> policy. Disclose all third-party SDK behaviour and app permissions accurately.
+**Effective Date:** July 30, 2026  
+**Last Updated:** July 30, 2026
 
-**Effective Date:** [Month DD, YYYY]  
-**Last Updated:** [Month DD, YYYY]
+## Overview
 
-## Introduction
+Spendzo is an offline-first personal expense and budget-tracking application.
+It is provided by **actionanand**. It does not require an account and does not
+include advertising, analytics, tracking, telemetry, crash reporting, or cloud
+synchronization.
 
-This sample explains how **Spendzo**, a personal expense and budget-tracking
-application, may handle information. Replace every bracketed item and revise
-each section to describe the released app exactly.
+## Information stored by the app
 
-## Developer Information
+Spendzo stores information that you enter, including:
 
-- **Developer:** [Developer or company name]
-- **Location:** [Country or region, if appropriate]
-- **Privacy contact:** [App-specific privacy email]
+- Expenses, amounts, dates, categories, titles, notes, payment methods, and tags
+- Income entries, sources, amounts, dates, and notes
+- Budgets, savings targets, emergency allocations, and category limits
+- App preferences such as currency, budget-cycle dates, theme, and lock settings
 
-## Information the App Accesses
+This information is stored locally in the app's private SQLite database on
+Android. The developer does not receive or have access to it.
 
-Describe information the app can read or access, such as [transaction entries
-entered by the user, categories, budgets, device files selected for import, or
-other actual inputs]. Remove anything the app does not access.
+## Information collected or shared
 
-## Information the App Collects
+Spendzo does not send your financial information or app usage information to
+the developer or third parties. It does not sell or share personal data.
 
-State whether information leaves the device. If data is collected, list each
-data type, whether collection is required or optional, and how it is obtained.
-Do not describe data as uncollected if an SDK transmits it.
+The libraries used to provide the app interface, charts, local storage, and
+Android integration run within the app. No third-party analytics, advertising,
+or cloud-data SDK is included.
 
-## How Information Is Used
+## PIN and fingerprint protection
 
-Explain each real purpose, for example [calculating budgets, displaying reports,
-restoring a backup, responding to support requests, or another verified
-purpose].
+PIN protection is optional. Spendzo stores a cryptographic PIN verifier rather
+than the PIN itself. There is no PIN recovery.
 
-## Local Data Storage
+Optional fingerprint unlock is handled by Android's biometric system. Spendzo
+does not receive or store fingerprint images or biometric templates. Android
+Keystore protects the local secret used for fingerprint unlock, and a PIN
+remains available as the fallback.
 
-Explain which information is stored locally, where practical, and whether
-uninstalling the app removes it. Note any user-selected files that can remain
-outside app storage.
+## Permissions
 
-## Backup and Restore
+Spendzo may use:
 
-Describe any backup or restore feature, including where backups are stored,
-whether they are encrypted, and whether the developer can access them. If no
-such feature exists, say so only after verifying the released app.
+- **Biometric permission:** only when you choose fingerprint unlock.
+- **Internet permission:** included for the Capacitor application runtime. The
+  reviewed Spendzo app does not use it to upload or synchronize financial data.
 
-## Device Permissions
+Spendzo does not request location, camera, microphone, contacts, SMS, or broad
+storage permissions. Android's system document picker is used when you choose
+where to save an export or backup.
 
-List every permission requested by the published build and explain why it is
-needed. Example placeholders: [notifications], [storage or media access], and
-[biometric access]. Delete permissions that are not requested.
+## Backups and exports
 
-## Data Sharing
+You can create local `.budgetbackup`, CSV, and PDF files. These files are saved
+only to a location you select. Backup files exclude PIN and biometric secrets,
+but the financial information inside a backup is not encrypted. Anyone who can
+access an exported file may be able to read it.
 
-Identify every recipient of user data and the reason for sharing. If the app
-does not share data, verify that this is also true for all libraries and SDKs
-before making that statement.
+Spendzo does not upload or retain copies of exported files. You are responsible
+for protecting and deleting files saved outside the app.
 
-## Third-Party Services and SDKs
+## Data retention and deletion
 
-List each third-party service or SDK, its purpose, the data it may process, and
-a link to its privacy information. Use `[No third-party services — verify]`
-only when the production build contains none.
+Local data remains on the device until you delete individual records, clear
+Spendzo's storage through Android settings, or uninstall the app. Files that
+you exported are separate and must be deleted from their saved locations.
 
-## Data Security
+Because Spendzo has no account or developer-operated server, there is no
+server-side account data for the developer to delete.
 
-Describe safeguards that are actually implemented, such as [platform-provided
-storage controls, transport encryption, access controls, or backup protection].
-No system is completely secure, so avoid guarantees.
+## Children's privacy
 
-## Data Retention
+Spendzo is a general-purpose budgeting tool and is not specifically directed to
+children under 13. The developer does not knowingly collect personal
+information from children or other users.
 
-State how long each collected or stored data category is retained and the
-criteria used to determine that period. Include support correspondence and
-backups where applicable.
+## Changes to this policy
 
-## Data Deletion
+This policy may be updated when Spendzo's features or data practices change.
+The updated date at the top will identify the latest version.
 
-Explain the in-app deletion steps and any external request process. Identify
-what is deleted, what may remain, the reason for any retention, and the expected
-time to complete a verified request.
+## Contact
 
-## Children’s Privacy
-
-State the intended age group and describe the actual handling of children’s
-data. Do not claim an age restriction or compliance standard unless it applies
-to the app and has been reviewed.
-
-## Changes to This Privacy Policy
-
-Explain how material policy changes will be communicated and update the date at
-the top whenever the policy changes.
-
-## Contact Us
-
-For questions or requests about this policy, contact:
-
-- **Email:** [App-specific privacy email]
-- **Developer:** [Developer or company name]
-- **Postal address, if required:** [Address]
+For privacy questions, email **anand.official.in@gmail.com**.

@@ -16,10 +16,10 @@ export const siteSettings: SiteSettings = {
   // Set this to the deployed origin, for example https://policies.example.com.
   // VITEPRESS_PRODUCTION_DOMAIN takes precedence during a build.
   productionDomain: '',
-  developerName: '[Developer name]',
-  generalSupportEmail: 'support@example.com',
-  privacyEmail: 'privacy@example.com',
-  githubUrl: 'https://github.com/actionanand',
+  developerName: 'actionanand',
+  generalSupportEmail: 'anand.official.in@gmail.com',
+  privacyEmail: 'anand.official.in@gmail.com',
+  githubUrl: '',
   playStoreDeveloperUrl:
-    'https://play.google.com/store/apps/dev?id=YOUR_DEVELOPER_ID'
+    'https://play.google.com/store/apps/dev?id=9131486047464010567'
 }
