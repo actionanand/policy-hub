@@ -17,7 +17,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
-      VITEPRESS_BASE: ${{ vars.VITEPRESS_BASE || format('/{0}/', github.event.repository.name) }}
+      VITEPRESS_BASE: /policy-hub/
       VITEPRESS_PRODUCTION_DOMAIN: ${{ vars.VITEPRESS_PRODUCTION_DOMAIN }}
 
     steps:
