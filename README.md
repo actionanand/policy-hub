@@ -290,7 +290,8 @@ through an ARIA live region.
 
 ## Configurable base path
 
-The base defaults to `/`. Set `VITEPRESS_BASE` for a repository site:
+The base defaults to `/` for local development. The GitHub Pages workflow pins
+the deployed project base to `/policy-hub/`:
 
 ```bash
 VITEPRESS_BASE=/policy-hub/ npm run docs:build
@@ -333,11 +334,9 @@ site to an orphan `gh-pages` branch.
    ```
 
 3. In **Settings → Secrets and variables → Actions → Variables**, optionally
-   set:
-
-   - `VITEPRESS_BASE` to `/policy-hub/` for a project site. The workflow already
-     derives this value from the repository name when it is not set.
-   - `VITEPRESS_PRODUCTION_DOMAIN` to the deployed origin.
+   set `VITEPRESS_PRODUCTION_DOMAIN` to the deployed origin. Do not create a
+   `VITEPRESS_BASE` variable for this deployment; the workflow explicitly uses
+   `/policy-hub/`.
 
 4. Push to `master` again or run the workflow manually whenever a deployment is
    needed.

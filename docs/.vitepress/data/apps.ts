@@ -86,8 +86,7 @@ export const apps: AppInfo[] = [
     id: 'spendzo',
     name: 'Spendzo',
     shortDescription: 'A personal expense and budget-tracking application.',
-    // icon: '/apps/spendzo/icon.png',
-    icon: '/apps/spendzo/spendzo.png',
+    icon: '/apps/spendzo/icon.png',
     documents: createDocuments('spendzo')
     // Add playStoreUrl and githubUrl after the real listings are available.
   },
@@ -95,8 +94,7 @@ export const apps: AppInfo[] = [
     id: 'stillora',
     name: 'Stillora',
     shortDescription: 'A relaxation, meditation and ambient-sound application.',
-    // icon: '/apps/stillora/icon.png',
-    icon: '/apps/stillora/stillora.png',
+    icon: '/apps/stillora/icon.png',
     documents: createDocuments('stillora')
     // Add playStoreUrl and githubUrl after the real listings are available.
   }
