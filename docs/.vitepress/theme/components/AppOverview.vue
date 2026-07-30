@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { withBase } from 'vitepress'
 import { getApp } from '../../data/apps'
 import AppBreadcrumbs from './AppBreadcrumbs.vue'
@@ -8,6 +8,7 @@ import ExternalLinkButton from './ExternalLinkButton.vue'
 
 const props = defineProps<{ appId: string }>()
 const app = computed(() => getApp(props.appId))
+const iconFailed = ref(false)
 const initials = computed(() =>
   app.value
     ? app.value.name
@@ -27,7 +28,12 @@ const initials = computed(() =>
 
     <header class="app-overview__hero">
       <div class="app-icon app-icon--large" aria-hidden="true">
-        <img v-if="app.icon" :src="withBase(app.icon)" alt="" />
+        <img
+          v-if="app.icon && !iconFailed"
+          :src="withBase(app.icon)"
+          alt=""
+          @error="iconFailed = true"
+        />
         <span v-else>{{ initials }}</span>
       </div>
       <div>
@@ -40,49 +46,20 @@ const initials = computed(() =>
     <section aria-labelledby="legal-support-heading">
       <h2 id="legal-support-heading">Legal and support</h2>
       <div class="resource-grid">
-        <a class="resource-card" :href="withBase(app.privacyUrl)">
-          <span class="resource-card__icon" aria-hidden="true">§</span>
-          <span>
-            <strong>Privacy Policy</strong>
-            <small>How information is handled</small>
-          </span>
-          <span aria-hidden="true">→</span>
-        </a>
         <a
-          v-if="app.termsUrl"
+          v-for="document in app.documents"
+          :key="document.id"
           class="resource-card"
-          :href="withBase(app.termsUrl)"
+          :href="withBase(document.portalUrl)"
         >
-          <span class="resource-card__icon" aria-hidden="true">✓</span>
-          <span>
-            <strong>Terms and Conditions</strong>
-            <small>Rules for using the app</small>
+          <span class="resource-card__icon" aria-hidden="true">
+            {{ document.symbol }}
           </span>
-          <span aria-hidden="true">→</span>
-        </a>
-        <a
-          v-if="app.supportUrl"
-          class="resource-card"
-          :href="withBase(app.supportUrl)"
-        >
-          <span class="resource-card__icon" aria-hidden="true">?</span>
           <span>
-            <strong>Support</strong>
-            <small>Help and contact options</small>
+            <strong>{{ document.label }}</strong>
+            <small>{{ document.shortDescription }}</small>
           </span>
-          <span aria-hidden="true">→</span>
-        </a>
-        <a
-          v-if="app.dataDeletionUrl"
-          class="resource-card"
-          :href="withBase(app.dataDeletionUrl)"
-        >
-          <span class="resource-card__icon" aria-hidden="true">×</span>
-          <span>
-            <strong>Data Deletion</strong>
-            <small>Delete app data safely</small>
-          </span>
-          <span aria-hidden="true">→</span>
+          <span aria-hidden="true">-&gt;</span>
         </a>
       </div>
     </section>

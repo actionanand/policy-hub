@@ -101,16 +101,10 @@ export default defineConfig({
             text: app.name,
             items: [
               { text: 'Overview', link: `/apps/${app.id}/` },
-              { text: 'Privacy Policy', link: app.privacyUrl },
-              ...(app.termsUrl
-                ? [{ text: 'Terms and Conditions', link: app.termsUrl }]
-                : []),
-              ...(app.supportUrl
-                ? [{ text: 'Support', link: app.supportUrl }]
-                : []),
-              ...(app.dataDeletionUrl
-                ? [{ text: 'Data Deletion', link: app.dataDeletionUrl }]
-                : [])
+              ...app.documents.map((document) => ({
+                text: document.label,
+                link: document.portalUrl
+              }))
             ]
           }
         ]
