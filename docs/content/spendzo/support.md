@@ -1,18 +1,24 @@
 # Spendzo Support
 
-This is sample support content. Replace the contact details and troubleshooting
-steps before publishing.
+For Spendzo support, email **anand.official.in@gmail.com**.
 
-## Contact support
+When reporting an issue, include:
 
-- **Email:** [Spendzo support email]
-- **Expected response time:** [Business days]
-- **Include:** App version, Android version, device model, and a description of
-  the issue. Do not send sensitive financial information.
+- Spendzo app version
+- Android version and device model
+- A short description of what happened
+- Steps that reproduce the issue, if known
 
-## Common checks
+Do not send PINs, complete financial records, unredacted backups, or other
+sensitive information by email.
 
-1. Confirm that Spendzo is updated from the official Google Play listing.
-2. Restart the app and the device.
-3. Check available device storage before creating or restoring a backup.
-4. If the issue continues, contact support with the non-sensitive details above.
+## Common help
+
+- **Forgotten PIN:** Spendzo cannot recover a PIN. If you cannot unlock the app,
+  clearing its Android storage or reinstalling it will also remove local data.
+- **Backup import:** Select a valid `.budgetbackup` file. Spendzo previews it
+  before merge or replacement.
+- **CSV, PDF, or backup export:** Choose a writable location in Android's system
+  document picker.
+- **Missing data after reinstalling:** Restore a backup you previously saved.
+  Spendzo does not provide cloud sync.

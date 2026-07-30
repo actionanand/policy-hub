@@ -1,21 +1,28 @@
 # Delete Spendzo Data
 
-> **Sample instructions — verify before publishing.** These steps must match the
-> released app and the Google Play data-deletion declaration.
+Spendzo has no user account or server-side data. Your app data is stored locally
+on your device.
 
-## Delete data stored on the device
+## Delete individual expenses
 
-1. Open Spendzo.
-2. Go to **[Settings path]**.
-3. Select **[Delete all data]**.
-4. Review the message and confirm deletion.
+Open Spendzo, select the relevant transaction, choose **Delete**, and confirm.
 
-If the app has no in-app deletion control, replace these steps with accurate
-Android settings or uninstall instructions and explain any exported files that
-remain.
+## Delete all app data
 
-## Request deletion of data held by the developer
+Use either of these Android options:
 
-Email [Spendzo privacy email] with the subject **Spendzo data deletion request**.
-Explain how identity will be verified, what will be deleted, any information
-that must be retained, and the expected completion time.
+1. Open **Settings > Apps > Spendzo > Storage** and select **Clear storage** or
+   **Clear data**.
+2. Uninstall Spendzo.
+
+Clearing storage or uninstalling removes Spendzo's app-private local database,
+settings, PIN verifier, and biometric unlock material from that installation.
+
+## Delete exported files
+
+Backups, CSV files, and PDF files saved through Android's document picker are
+outside Spendzo's private storage. Delete those files separately using the file
+manager or storage provider where you saved them.
+
+There is no server deletion request to submit because Spendzo does not upload
+or retain user data. For help, email **anand.official.in@gmail.com**.

@@ -24,7 +24,7 @@ import { siteSettings } from '../../data/site'
         </a>
       </dd>
     </div>
-    <div>
+    <div v-if="siteSettings.githubUrl">
       <dt>GitHub</dt>
       <dd>
         <a
@@ -36,7 +36,7 @@ import { siteSettings } from '../../data/site'
         </a>
       </dd>
     </div>
-    <div>
+    <div v-if="siteSettings.playStoreDeveloperUrl">
       <dt>Google Play</dt>
       <dd>
         <a

@@ -1,31 +1,36 @@
 # Terms and Conditions for Spendzo
 
-> **Sample content — review before publishing.** Replace all placeholders and
-> obtain appropriate legal review for the markets where the app is offered.
+**Effective Date:** July 30, 2026
 
-**Effective Date:** [Month DD, YYYY]
+## Use of Spendzo
 
-## Acceptance of these terms
+Spendzo is provided as a personal expense and budget-tracking tool. You are
+responsible for the accuracy of the information you enter and for deciding how
+to use the summaries, budgets, and reports it produces.
 
-By using Spendzo, users agree to the final terms published here. Describe any
-age, location, or account requirements that actually apply.
+Spendzo does not provide financial, investment, tax, accounting, or legal
+advice. Do not rely on it as the only record for important financial decisions.
 
-## Purpose of the app
+## Your data and backups
 
-Spendzo provides personal expense and budget-tracking tools. It does not provide
-financial, tax, accounting, or investment advice unless the released product
-and applicable legal review expressly support such a service.
+Spendzo stores data locally and does not provide an account or cloud-sync
+service. You are responsible for creating and protecting backups when needed.
+Exported backup, CSV, and PDF files may contain readable financial information.
 
-## User responsibilities
+If you enable a PIN, keep it safe. Spendzo has no PIN-recovery feature.
 
-Explain acceptable use, responsibility for entries and backups, prohibited
-conduct, and any obligations connected to imported or exported information.
+## Availability
 
-## Availability and changes
+Features may change as the app is improved. While reasonable care is taken,
+Spendzo is provided without a guarantee that it will always be available,
+error-free, or suitable for every purpose.
 
-Describe how features, compatibility, pricing, and these terms may change.
-Avoid promises of uninterrupted or error-free service.
+## Acceptable use
+
+Do not misuse the app, attempt to interfere with its operation, or use it in a
+way that violates applicable law.
 
 ## Contact
 
-Questions about these terms can be sent to [support email].
+Questions about these terms can be sent to
+**anand.official.in@gmail.com**.
