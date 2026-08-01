@@ -1,31 +1,36 @@
 # Terms and Conditions for Stillora
 
-> **Sample content — review before publishing.** Replace all placeholders and
-> obtain appropriate legal review for the markets where the app is offered.
+**Effective Date:** August 1, 2026
 
-**Effective Date:** [Month DD, YYYY]
+## Use of Stillora
 
-## Acceptance of these terms
+Stillora provides ambient sounds, moving backgrounds, sound mixing, and timers
+for relaxation, focus, and meditation. It is not a medical service and does not
+provide diagnosis, treatment, or professional health advice.
 
-By using Stillora, users agree to the final terms published here. Describe any
-age, location, purchase, or account requirements that actually apply.
+Use audio at a safe volume. Do not use the app where reduced attention could be
+dangerous, including while driving or operating machinery.
 
-## Purpose of the app
+## Your settings and backups
 
-Stillora provides relaxation, meditation, and ambient-sound features. It is not
-a medical service and should not be presented as a substitute for professional
-care unless the released product and legal review support those claims.
+Stillora stores preferences and saved mixes locally and does not provide an
+account or cloud-sync service. You are responsible for exporting and protecting
+backup files when needed. A backup can expose your preferences and mix names to
+anyone who can read the file.
 
-## User responsibilities
+## Content and acceptable use
 
-Explain acceptable use, safe use of audio, prohibited conduct, and any rules
-that apply to downloaded or licensed content.
+Stillora's included audio, video, branding, and interface remain subject to
+their applicable rights. Do not copy, redistribute, reverse engineer, interfere
+with, or misuse the app except where applicable law permits it.
 
-## Availability and changes
+## Availability
 
-Describe how features, content, compatibility, pricing, and these terms may
-change. Avoid promises of uninterrupted or error-free service.
+Features and compatibility may change as Stillora is improved. The app is
+provided without a guarantee that it will always be available, error-free, or
+suitable for every purpose.
 
 ## Contact
 
-Questions about these terms can be sent to [support email].
+Questions about these terms can be sent to
+**anand.official.in@gmail.com**.

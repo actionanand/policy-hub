@@ -1,46 +1,37 @@
 # Stillora Data Collection
 
-> **Sample disclosure - review before publishing.** This page must match the
-> released app, its third-party SDKs, and the Google Play Data Safety form.
+**Last reviewed:** August 1, 2026
 
-**Last reviewed:** [Month DD, YYYY]
+## Data stored locally
 
-## Data accessed or entered
+Stillora stores theme, volume, timer and transition preferences, the last
+selected sound and background, active sound layers, and saved mix names and
+settings in local app storage. The developer does not receive this information.
 
-Describe every data category Stillora can access or receive, such as [saved
-sound mixes], [favourites], [sleep timers], [downloaded audio], [support
-messages], and [device or app information]. Remove categories that do not
-apply.
+If you export a backup, the app creates a JSON file containing those settings.
+You choose where the file is saved or shared.
 
-## Data collected off the device
+## Data collected by the developer
 
-For every data category transmitted away from the device, specify:
+Stillora has no account, analytics, advertising, crash reporting, tracking, or
+cloud-sync service. The developer does not collect app preferences, sound
+choices, saved mixes, device identifiers, or app activity.
 
-- The exact data type
-- Whether collection is required or optional
-- Why it is collected
-- Whether it is linked to the user
-- How long it is retained
+If you email support, the developer receives only the information you choose to
+include in the message.
 
-If no data leaves the device, verify that statement against every production
-SDK, media request, and network request before publishing it.
+## Third-party network data
 
-## Data shared with third parties
+The app's interface references Google Fonts. When font resources are requested,
+Google may receive standard connection information such as the device IP
+address, user agent, and request time. Audio and moving backgrounds are bundled
+with Stillora and are not streamed.
 
-List each recipient, the data shared, and the purpose. Include analytics,
-crash-reporting, advertising, media hosting, payment, and support providers
-when present.
+## Permissions
 
-## Permissions connected to data
-
-List each Android permission that can expose or create data and explain why
-Stillora requests it. The list must match the current Play Store build.
-
-## User controls
-
-Explain how users can view, download, correct, reset, or delete their
-information, including any actions that must be requested by email.
+The reviewed app does not use camera, microphone, location, contacts, phone, or
+SMS data. Internet access may be available for Google-hosted font resources.
 
 ## Contact
 
-Questions about Stillora data practices can be sent to [Stillora privacy email].
+Questions can be sent to **anand.official.in@gmail.com**.

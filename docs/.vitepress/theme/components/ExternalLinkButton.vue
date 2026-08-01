@@ -16,6 +16,5 @@ defineProps<{
     :aria-label="`${label} (opens in a new tab)`"
   >
     <span>{{ label }}</span>
-    <span aria-hidden="true">↗</span>
   </a>
 </template>

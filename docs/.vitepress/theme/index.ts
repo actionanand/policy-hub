@@ -8,6 +8,8 @@ import AppSubnav from './components/AppSubnav.vue'
 import ContactDetails from './components/ContactDetails.vue'
 import CopyStandaloneUrl from './components/CopyStandaloneUrl.vue'
 import ExternalLinkButton from './components/ExternalLinkButton.vue'
+import StoreListings from './components/StoreListings.vue'
+import ReleaseNotesFormatter from './components/ReleaseNotesFormatter.vue'
 import './custom.css'
 
 export default {
@@ -21,5 +23,7 @@ export default {
     app.component('ContactDetails', ContactDetails)
     app.component('CopyStandaloneUrl', CopyStandaloneUrl)
     app.component('ExternalLinkButton', ExternalLinkButton)
+    app.component('StoreListings', StoreListings)
+    app.component('ReleaseNotesFormatter', ReleaseNotesFormatter)
   }
 } satisfies Theme

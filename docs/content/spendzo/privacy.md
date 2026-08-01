@@ -6,7 +6,7 @@
 ## Overview
 
 Spendzo is an offline-first personal expense and budget-tracking application.
-It is provided by **actionanand**. It does not require an account and does not
+It is provided by **Anand Raja**. It does not require an account and does not
 include advertising, analytics, tracking, telemetry, crash reporting, or cloud
 synchronization.
 

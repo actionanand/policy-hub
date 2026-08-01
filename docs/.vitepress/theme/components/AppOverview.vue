@@ -40,6 +40,16 @@ const initials = computed(() =>
         <p class="eyebrow">App information</p>
         <h1>{{ app.name }}</h1>
         <p>{{ app.shortDescription }}</p>
+        <div class="app-overview__badges">
+          <span class="app-badge">{{ app.platform === 'android' ? 'Android app' : 'Web app' }}</span>
+          <span
+            v-if="app.platform === 'android'"
+            class="app-badge"
+            :class="app.releasedToPlayStore ? 'is-released' : 'is-unreleased'"
+          >
+            {{ app.releasedToPlayStore ? 'Released on Google Play' : 'Not released on Google Play' }}
+          </span>
+        </div>
       </div>
     </header>
 
@@ -64,8 +74,39 @@ const initials = computed(() =>
       </div>
     </section>
 
+    <section aria-labelledby="publishing-heading">
+      <h2 id="publishing-heading">
+        {{ app.platform === 'android' ? 'Google Play publishing' : 'Publishing copy' }}
+      </h2>
+      <div class="resource-grid">
+        <a
+          class="resource-card"
+          :href="withBase(`/apps/${app.id}/store-listings`)"
+        >
+          <span class="resource-card__icon" aria-hidden="true">A</span>
+          <span>
+            <strong>{{ app.platform === 'android' ? 'Store listing' : 'Descriptions' }}</strong>
+            <small>Copy the short and full descriptions</small>
+          </span>
+          <span aria-hidden="true">-&gt;</span>
+        </a>
+        <a
+          v-if="app.platform === 'android'"
+          class="resource-card"
+          :href="withBase(`/apps/${app.id}/release-notes`)"
+        >
+          <span class="resource-card__icon" aria-hidden="true">R</span>
+          <span>
+            <strong>Release notes</strong>
+            <small>Format localized notes for Play Console</small>
+          </span>
+          <span aria-hidden="true">-&gt;</span>
+        </a>
+      </div>
+    </section>
+
     <section
-      v-if="app.playStoreUrl || app.githubUrl"
+      v-if="app.playStoreUrl || app.webLinks?.length || app.githubUrl"
       aria-labelledby="official-links-heading"
     >
       <h2 id="official-links-heading">Official links</h2>
@@ -75,6 +116,13 @@ const initials = computed(() =>
           :href="app.playStoreUrl"
           label="View on Google Play"
           variant="primary"
+        />
+        <ExternalLinkButton
+          v-for="webLink in app.webLinks"
+          :key="webLink.url"
+          :href="webLink.url"
+          :label="webLink.label"
+          variant="secondary"
         />
         <ExternalLinkButton
           v-if="app.githubUrl"

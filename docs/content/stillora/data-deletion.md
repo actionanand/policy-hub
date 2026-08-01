@@ -1,21 +1,24 @@
 # Delete Stillora Data
 
-> **Sample instructions — verify before publishing.** These steps must match the
-> released app and the Google Play data-deletion declaration.
+Stillora has no online account or developer-operated cloud database. Its
+settings and saved mixes are stored on your device.
 
-## Delete data stored on the device
+## Delete data stored by the app
 
-1. Open Stillora.
-2. Go to **[Settings path]**.
-3. Select **[Delete app data or reset]**.
-4. Review the message and confirm deletion.
+Use either Android option:
 
-If the app has no in-app deletion control, replace these steps with accurate
-Android settings or uninstall instructions and explain any downloaded audio
-files that remain.
+1. Open **Settings → Apps → Stillora → Storage** and select **Clear storage** or
+   **Clear data**; or
+2. Uninstall Stillora.
 
-## Request deletion of data held by the developer
+The exact labels may differ by Android version and device manufacturer. These
+actions remove the local preferences and saved mixes held by the app.
 
-Email [Stillora privacy email] with the subject **Stillora data deletion
-request**. Explain how identity will be verified, what will be deleted, any
-information that must be retained, and the expected completion time.
+## Delete exported backups
+
+Clearing app data or uninstalling Stillora does not delete JSON backup files
+that you saved or shared. Delete each backup separately from device storage and
+from any other app or storage provider where you placed a copy.
+
+Because the developer does not hold Stillora account data, no email request is
+needed to delete data stored by the app.
