@@ -6,7 +6,7 @@
 ## Overview
 
 Stillora is an offline-first ambient sound application developed by
-**actionanand**. It does not require an account and does not include advertising,
+**Anand Raja**. It does not require an account and does not include advertising,
 analytics, tracking, crash reporting, or cloud sync.
 
 ## Information Stored on Your Device
@@ -89,5 +89,5 @@ The effective and last-updated dates will be revised when changes are published.
 
 For privacy questions about Stillora, contact:
 
-- **Developer:** actionanand
+- **Developer:** Anand Raja
 - **Email:** anand.official.in@gmail.com

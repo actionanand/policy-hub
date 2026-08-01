@@ -97,6 +97,51 @@ export const apps: AppInfo[] = [
     icon: '/apps/stillora/icon.png',
     documents: createDocuments('stillora')
     // Add playStoreUrl and githubUrl after the real listings are available.
+  },
+  {
+    id: 'vault-nest',
+    name: 'Vault Nest',
+    shortDescription:
+      'A private, offline-first password and sensitive-information manager.',
+    icon: '/apps/vault-nest/icon.png',
+    githubUrl: 'https://github.com/actionanand/vault-nest',
+    documents: createDocuments('vault-nest')
+  },
+  {
+    id: 'card-nest',
+    name: 'Card Nest',
+    shortDescription:
+      'A private, offline-first credit-card and personal-finance organizer.',
+    icon: '/apps/card-nest/icon.png',
+    githubUrl: 'https://github.com/actionanand/card-nest',
+    documents: createDocuments('card-nest')
+  },
+  {
+    id: 'link-deck',
+    name: 'Link Deck',
+    shortDescription:
+      'A private, offline-first bookmark manager with profiles and nested folders.',
+    icon: '/apps/link-deck/icon.png',
+    githubUrl: 'https://github.com/actionanand/link-deck',
+    documents: createDocuments('link-deck')
+  },
+  {
+    id: 'who-called',
+    name: 'Who Called',
+    shortDescription:
+      'A private, offline contact organizer with optional call-history tools.',
+    icon: '/apps/who-called/icon.png',
+    githubUrl: 'https://github.com/actionanand/who-called',
+    documents: createDocuments('who-called')
+  },
+  {
+    id: 'arflix',
+    name: 'ARFlix',
+    shortDescription:
+      'A movie and TV discovery app with TMDb details and a curated collection.',
+    icon: '/apps/arflix/icon.png',
+    githubUrl: 'https://github.com/actionanand/arflix',
+    documents: createDocuments('arflix')
   }
 ]
 

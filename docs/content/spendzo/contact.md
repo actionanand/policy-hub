@@ -1,6 +1,6 @@
 # Contact Spendzo
 
-**Developer:** actionanand
+**Developer:** Anand Raja
 
 For support, privacy questions, data-deletion help, or other Spendzo enquiries,
 email:

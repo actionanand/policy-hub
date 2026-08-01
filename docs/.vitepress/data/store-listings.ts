@@ -1,6 +1,11 @@
 import { apps } from './apps'
 import spendzoSource from '../../content/spendzo/store-listing.md?raw'
 import stilloraSource from '../../content/stillora/store-listing.md?raw'
+import vaultNestSource from '../../content/vault-nest/store-listing.md?raw'
+import cardNestSource from '../../content/card-nest/store-listing.md?raw'
+import linkDeckSource from '../../content/link-deck/store-listing.md?raw'
+import whoCalledSource from '../../content/who-called/store-listing.md?raw'
+import arflixSource from '../../content/arflix/store-listing.md?raw'
 
 export interface StoreListing {
   appId: string
@@ -10,7 +15,12 @@ export interface StoreListing {
 
 const listingSources: Record<string, string> = {
   spendzo: spendzoSource,
-  stillora: stilloraSource
+  stillora: stilloraSource,
+  'vault-nest': vaultNestSource,
+  'card-nest': cardNestSource,
+  'link-deck': linkDeckSource,
+  'who-called': whoCalledSource,
+  arflix: arflixSource
 }
 
 function parseShortDescription(frontmatter: string, appId: string): string {
