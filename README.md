@@ -395,6 +395,24 @@ For Cloudflare Pages, attach the custom domain in the Pages dashboard and use
 For either platform, set `VITEPRESS_PRODUCTION_DOMAIN` to the final HTTPS origin
 so canonical URLs, Open Graph URLs, and the sitemap are correct.
 
+## Google Play Store descriptions
+
+Each app has a page such as `/apps/spendzo/store-listings` showing its copy-ready
+short and full descriptions. Edit the matching Markdown file, such as
+`docs/content/spendzo/store-listing.md`. Put the short description in its
+frontmatter and the full description in the Markdown body. The build rejects
+missing app entries, short descriptions over 80 characters, and full
+descriptions over 4,000 characters.
+
+Write the Markdown body as Play Store-ready plain text. Use unformatted section
+labels, paragraphs, and `•` bullets; avoid Markdown headings, emphasis markers,
+and emojis. The listing page displays and copies the exact same text.
+
+When adding an app to `docs/.vitepress/data/apps.ts`, add its matching
+`docs/content/<app-id>/store-listing.md` file and import it in
+`docs/.vitepress/data/store-listings.ts`. Each description has its own Copy
+button and can be pasted directly into Google Play Console.
+
 ## Google Play privacy-policy checklist
 
 Before submitting a standalone route:

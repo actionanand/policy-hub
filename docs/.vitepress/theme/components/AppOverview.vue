@@ -64,6 +64,23 @@ const initials = computed(() =>
       </div>
     </section>
 
+    <section aria-labelledby="publishing-heading">
+      <h2 id="publishing-heading">Google Play publishing</h2>
+      <div class="resource-grid">
+        <a
+          class="resource-card"
+          :href="withBase(`/apps/${app.id}/store-listings`)"
+        >
+          <span class="resource-card__icon" aria-hidden="true">A</span>
+          <span>
+            <strong>Store listing</strong>
+            <small>Copy the short and full descriptions</small>
+          </span>
+          <span aria-hidden="true">-&gt;</span>
+        </a>
+      </div>
+    </section>
+
     <section
       v-if="app.playStoreUrl || app.githubUrl"
       aria-labelledby="official-links-heading"

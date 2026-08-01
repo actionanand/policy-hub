@@ -101,6 +101,10 @@ export default defineConfig({
             text: app.name,
             items: [
               { text: 'Overview', link: `/apps/${app.id}/` },
+              {
+                text: 'Store listing',
+                link: `/apps/${app.id}/store-listings`
+              },
               ...app.documents.map((document) => ({
                 text: document.label,
                 link: document.portalUrl

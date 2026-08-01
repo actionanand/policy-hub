@@ -11,6 +11,10 @@ const links = computed(() => {
   if (!app.value) return []
   return [
     { label: 'Overview', href: `/apps/${app.value.id}/` },
+    {
+      label: 'Store listing',
+      href: `/apps/${app.value.id}/store-listings`
+    },
     ...app.value.documents.map((document) => ({
       label: document.navLabel || document.label,
       href: document.portalUrl
