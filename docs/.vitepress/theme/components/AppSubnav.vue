@@ -12,13 +12,17 @@ const links = computed(() => {
   return [
     { label: 'Overview', href: `/apps/${app.value.id}/` },
     {
-      label: 'Store listing',
+      label: app.value.platform === 'android' ? 'Store listing' : 'Descriptions',
       href: `/apps/${app.value.id}/store-listings`
     },
-    {
-      label: 'Release notes',
-      href: `/apps/${app.value.id}/release-notes`
-    },
+    ...(app.value.platform === 'android'
+      ? [
+          {
+            label: 'Release notes',
+            href: `/apps/${app.value.id}/release-notes`
+          }
+        ]
+      : []),
     ...app.value.documents.map((document) => ({
       label: document.navLabel || document.label,
       href: document.portalUrl

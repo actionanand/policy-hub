@@ -213,6 +213,132 @@ export const apps: AppInfo[] = [
     ],
     githubUrl: 'https://github.com/actionanand/arflix',
     documents: createDocuments('arflix')
+  },
+  {
+    id: 'office-pulse',
+    name: 'Office Pulse',
+    shortDescription:
+      'A work dashboard for attendance, schedules, tasks, notes, and utilities.',
+    icon: '/apps/office-pulse/icon.png',
+    platform: 'android',
+    releasedToPlayStore: false,
+    webLinks: [
+      {
+        label: 'Open Office Pulse in browser',
+        url: 'https://actionanand.github.io/office-pulse/'
+      }
+    ],
+    githubUrl: 'https://github.com/actionanand/office-pulse',
+    documents: createDocuments('office-pulse')
+  },
+  {
+    id: 'expenzo',
+    name: 'Expenzo',
+    shortDescription:
+      'A finance dashboard for expenses, budgets, savings, wishlists, and checklists.',
+    icon: '/apps/expenzo/icon.png',
+    platform: 'android',
+    releasedToPlayStore: false,
+    webLinks: [
+      {
+        label: 'Open Expenzo in browser',
+        url: 'https://actionanand.github.io/expenzo/'
+      }
+    ],
+    githubUrl: 'https://github.com/actionanand/expenzo',
+    documents: createDocuments('expenzo')
+  },
+  {
+    id: 'ar-tamil-jathagam',
+    name: 'AR Tamil Jathagam',
+    shortDescription:
+      'A Tamil and English astrology app for horoscopes, Panchanga, and compatibility.',
+    icon: '/apps/ar-tamil-jathagam/icon.png',
+    platform: 'android',
+    releasedToPlayStore: false,
+    webLinks: [
+      {
+        label: 'Open AR Tamil Jathagam in browser',
+        url: 'https://ar-tamil-jathagam.pages.dev/'
+      }
+    ],
+    githubUrl: 'https://github.com/actionanand/ar-tamil-jathagam',
+    documents: createDocuments('ar-tamil-jathagam')
+  },
+  {
+    id: 'lingua-log',
+    name: 'Lingua Log',
+    shortDescription:
+      'A multilingual sentence, translation, explanation, and learning-resource organizer.',
+    icon: '/apps/lingua-log/icon.png',
+    platform: 'android',
+    releasedToPlayStore: false,
+    webLinks: [
+      {
+        label: 'Open Lingua Log in browser',
+        url: 'https://actionanand.github.io/lingua-log/'
+      }
+    ],
+    githubUrl: 'https://github.com/actionanand/lingua-log',
+    documents: createDocuments('lingua-log')
+  },
+  {
+    id: 'scrollix',
+    name: 'Scrollix',
+    shortDescription:
+      'A curated, scrollable feed for videos, social posts, and web articles.',
+    icon: '/apps/scrollix/icon.png',
+    platform: 'android',
+    releasedToPlayStore: false,
+    webLinks: [
+      {
+        label: 'Open Scrollix in browser',
+        url: 'https://actionanand.github.io/scrollix/'
+      }
+    ],
+    githubUrl: 'https://github.com/actionanand/scrollix',
+    documents: createDocuments('scrollix')
+  },
+  {
+    id: 'arblogz',
+    name: 'AR Blogz',
+    shortDescription:
+      'A multilingual personal blog about learning, culture, health, food, and discoveries.',
+    icon: '/apps/arblogz/icon.png',
+    platform: 'web',
+    releasedToPlayStore: false,
+    webLinks: [
+      {
+        label: 'Open AR Blogz on Cloudflare Pages',
+        url: 'https://arblogz.pages.dev/'
+      },
+      {
+        label: 'Open AR Blogz on GitHub Pages',
+        url: 'https://actionanand.github.io/arblogz/'
+      }
+    ],
+    githubUrl: 'https://github.com/actionanand/arblogz',
+    documents: createDocuments('arblogz')
+  },
+  {
+    id: 'artamizhsolai',
+    name: 'AR Tamizh Solai',
+    shortDescription:
+      'A Tamil literature publication exploring classics, poetry, language, and culture.',
+    platform: 'web',
+    releasedToPlayStore: false,
+    webLinks: [
+      {
+        label: 'Open AR Tamizh Solai on Cloudflare Pages',
+        url: 'https://artamizhsolai.pages.dev/'
+      },
+      {
+        label: 'Open AR Tamizh Solai on GitHub Pages',
+        url: 'https://actionanand.github.io/artamizhsolai/'
+      }
+    ],
+    githubUrl: 'https://github.com/actionanand/artamizhsolai',
+    documents: createDocuments('artamizhsolai')
   }
 ]
 

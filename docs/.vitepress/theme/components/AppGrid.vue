@@ -54,20 +54,23 @@ const paginationItems = computed<PaginationItem[]>(() => {
   const total = totalPages.value
   if (total <= 7) return Array.from({ length: total }, (_, index) => index + 1)
 
-  const pages = [...new Set([1, total, currentPage.value - 1, currentPage.value, currentPage.value + 1])]
-    .filter((page) => page >= 1 && page <= total)
-    .sort((first, second) => first - second)
-  const items: PaginationItem[] = []
+  if (currentPage.value <= 3) {
+    return [1, 2, 3, 'ellipsis-end', total - 1, total]
+  }
 
-  pages.forEach((page, index) => {
-    const previous = pages[index - 1]
-    if (previous && page - previous > 1) {
-      items.push(previous === 1 ? 'ellipsis-start' : 'ellipsis-end')
-    }
-    items.push(page)
-  })
+  if (currentPage.value >= total - 2) {
+    return [1, 2, 'ellipsis-start', total - 2, total - 1, total]
+  }
 
-  return items
+  return [
+    1,
+    'ellipsis-start',
+    currentPage.value - 1,
+    currentPage.value,
+    currentPage.value + 1,
+    'ellipsis-end',
+    total
+  ]
 })
 
 watch([query, platformFilter, releaseFilter, pageSize], () => {
@@ -155,14 +158,6 @@ function resetFilters(): void {
         </div>
       </fieldset>
 
-      <label class="page-size-control">
-        <span>Apps per page</span>
-        <select v-model.number="pageSize">
-          <option v-for="size in pageSizes" :key="size" :value="size">
-            {{ size }}
-          </option>
-        </select>
-      </label>
     </div>
 
     <div class="directory-summary" aria-live="polite">
@@ -190,47 +185,61 @@ function resetFilters(): void {
     </div>
 
     <nav
-      v-if="filteredApps.length && totalPages > 1"
+      v-if="filteredApps.length"
       class="app-pagination"
       aria-label="Application pages"
     >
-      <button
-        type="button"
-        class="pagination-direction"
-        :disabled="currentPage === 1"
-        aria-label="Previous page"
-        @click="goToPage(currentPage - 1)"
-      >
-        <span aria-hidden="true">←</span>
-        <span>Previous</span>
-      </button>
-
-      <div class="pagination-pages">
-        <template v-for="item in paginationItems" :key="item">
-          <span v-if="typeof item !== 'number'" class="pagination-ellipsis" aria-hidden="true">…</span>
-          <button
-            v-else
-            type="button"
-            :class="{ 'is-current': currentPage === item }"
-            :aria-current="currentPage === item ? 'page' : undefined"
-            :aria-label="`Page ${item}`"
-            @click="goToPage(item)"
-          >
-            {{ item }}
-          </button>
-        </template>
+      <div class="pagination-settings">
+        <label class="page-size-control">
+          <span>Items per page:</span>
+          <select v-model.number="pageSize" aria-label="Items per page">
+            <option v-for="size in pageSizes" :key="size" :value="size">
+              {{ size }}
+            </option>
+          </select>
+        </label>
+        <span class="pagination-range">
+          {{ firstResult }}–{{ lastResult }} of {{ filteredApps.length }}
+        </span>
       </div>
 
-      <button
-        type="button"
-        class="pagination-direction"
-        :disabled="currentPage === totalPages"
-        aria-label="Next page"
-        @click="goToPage(currentPage + 1)"
-      >
-        <span>Next</span>
-        <span aria-hidden="true">→</span>
-      </button>
+      <div class="pagination-navigation">
+        <button
+          type="button"
+          class="pagination-direction"
+          :disabled="currentPage === 1"
+          aria-label="Previous page"
+          @click="goToPage(currentPage - 1)"
+        >
+          <span aria-hidden="true">‹</span>
+        </button>
+
+        <div v-if="totalPages > 1" class="pagination-pages">
+          <template v-for="item in paginationItems" :key="item">
+            <span v-if="typeof item !== 'number'" class="pagination-ellipsis" aria-hidden="true">…</span>
+            <button
+              v-else
+              type="button"
+              :class="{ 'is-current': currentPage === item }"
+              :aria-current="currentPage === item ? 'page' : undefined"
+              :aria-label="`Page ${item}`"
+              @click="goToPage(item)"
+            >
+              {{ item }}
+            </button>
+          </template>
+        </div>
+
+        <button
+          type="button"
+          class="pagination-direction"
+          :disabled="currentPage === totalPages"
+          aria-label="Next page"
+          @click="goToPage(currentPage + 1)"
+        >
+          <span aria-hidden="true">›</span>
+        </button>
+      </div>
     </nav>
   </section>
 </template>

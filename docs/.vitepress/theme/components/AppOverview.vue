@@ -75,7 +75,9 @@ const initials = computed(() =>
     </section>
 
     <section aria-labelledby="publishing-heading">
-      <h2 id="publishing-heading">Google Play publishing</h2>
+      <h2 id="publishing-heading">
+        {{ app.platform === 'android' ? 'Google Play publishing' : 'Publishing copy' }}
+      </h2>
       <div class="resource-grid">
         <a
           class="resource-card"
@@ -83,12 +85,13 @@ const initials = computed(() =>
         >
           <span class="resource-card__icon" aria-hidden="true">A</span>
           <span>
-            <strong>Store listing</strong>
+            <strong>{{ app.platform === 'android' ? 'Store listing' : 'Descriptions' }}</strong>
             <small>Copy the short and full descriptions</small>
           </span>
           <span aria-hidden="true">-&gt;</span>
         </a>
         <a
+          v-if="app.platform === 'android'"
           class="resource-card"
           :href="withBase(`/apps/${app.id}/release-notes`)"
         >

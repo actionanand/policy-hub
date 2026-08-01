@@ -27,7 +27,9 @@ const iconFailed = ref(false)
           {{ app.name.charAt(0) }}
         </span>
         <div>
-          <p class="store-listing-card__eyebrow">Google Play listing</p>
+          <p class="store-listing-card__eyebrow">
+            {{ app.platform === 'android' ? 'Google Play listing' : 'Publishing descriptions' }}
+          </p>
           <h2>{{ app.name }}</h2>
         </div>
       </header>
@@ -48,7 +50,7 @@ const iconFailed = ref(false)
   </div>
 
   <div v-else class="empty-state">
-    <h2>Store listing not found</h2>
+    <h2>Descriptions not found</h2>
     <p>Check the app ID and add its descriptions to the listing data.</p>
   </div>
 </template>

@@ -6,6 +6,13 @@ import cardNestSource from '../../content/card-nest/store-listing.md?raw'
 import linkDeckSource from '../../content/link-deck/store-listing.md?raw'
 import whoCalledSource from '../../content/who-called/store-listing.md?raw'
 import arflixSource from '../../content/arflix/store-listing.md?raw'
+import officePulseSource from '../../content/office-pulse/store-listing.md?raw'
+import expenzoSource from '../../content/expenzo/store-listing.md?raw'
+import arTamilJathagamSource from '../../content/ar-tamil-jathagam/store-listing.md?raw'
+import linguaLogSource from '../../content/lingua-log/store-listing.md?raw'
+import scrollixSource from '../../content/scrollix/store-listing.md?raw'
+import arblogzSource from '../../content/arblogz/store-listing.md?raw'
+import artamizhsolaiSource from '../../content/artamizhsolai/store-listing.md?raw'
 
 export interface StoreListing {
   appId: string
@@ -20,7 +27,14 @@ const listingSources: Record<string, string> = {
   'card-nest': cardNestSource,
   'link-deck': linkDeckSource,
   'who-called': whoCalledSource,
-  arflix: arflixSource
+  arflix: arflixSource,
+  'office-pulse': officePulseSource,
+  expenzo: expenzoSource,
+  'ar-tamil-jathagam': arTamilJathagamSource,
+  'lingua-log': linguaLogSource,
+  scrollix: scrollixSource,
+  arblogz: arblogzSource,
+  artamizhsolai: artamizhsolaiSource
 }
 
 function parseShortDescription(frontmatter: string, appId: string): string {
