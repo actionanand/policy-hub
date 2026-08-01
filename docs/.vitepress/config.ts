@@ -105,6 +105,10 @@ export default defineConfig({
                 text: 'Store listing',
                 link: `/apps/${app.id}/store-listings`
               },
+              {
+                text: 'Release notes',
+                link: `/apps/${app.id}/release-notes`
+              },
               ...app.documents.map((document) => ({
                 text: document.label,
                 link: document.portalUrl

@@ -413,6 +413,12 @@ When adding an app to `docs/.vitepress/data/apps.ts`, add its matching
 `docs/.vitepress/data/store-listings.ts`. Each description has its own Copy
 button and can be pasted directly into Google Play Console.
 
+Each app also has a release-notes route, such as
+`/apps/spendzo/release-notes`. The reusable formatter stores no release content:
+select a supported locale, enter up to 500 Unicode characters, and copy the
+generated `<locale>` block into Play Console. Only use locales that have been
+added to that app's store listing.
+
 ## Google Play privacy-policy checklist
 
 Before submitting a standalone route:

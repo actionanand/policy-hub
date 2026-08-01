@@ -32,7 +32,7 @@ import { siteSettings } from '../../data/site'
           target="_blank"
           rel="noopener noreferrer"
         >
-          Developer profile <span aria-hidden="true">↗</span>
+          Developer profile
         </a>
       </dd>
     </div>
@@ -44,7 +44,7 @@ import { siteSettings } from '../../data/site'
           target="_blank"
           rel="noopener noreferrer"
         >
-          Developer profile <span aria-hidden="true">↗</span>
+          Developer profile
         </a>
       </dd>
     </div>

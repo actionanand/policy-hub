@@ -78,6 +78,17 @@ const initials = computed(() =>
           </span>
           <span aria-hidden="true">-&gt;</span>
         </a>
+        <a
+          class="resource-card"
+          :href="withBase(`/apps/${app.id}/release-notes`)"
+        >
+          <span class="resource-card__icon" aria-hidden="true">R</span>
+          <span>
+            <strong>Release notes</strong>
+            <small>Format localized notes for Play Console</small>
+          </span>
+          <span aria-hidden="true">-&gt;</span>
+        </a>
       </div>
     </section>
 

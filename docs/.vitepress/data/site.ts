@@ -21,5 +21,5 @@ export const siteSettings: SiteSettings = {
   privacyEmail: 'anand.official.in@gmail.com',
   githubUrl: '',
   playStoreDeveloperUrl:
-    'https://play.google.com/store/apps/dev?id=9131486047464010567'
+    'https://play.google.com/store/apps/developer?id=actionanand'
 }
