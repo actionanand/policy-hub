@@ -29,11 +29,40 @@ const initials = computed(() =>
         <span v-else>{{ initials }}</span>
       </div>
       <div>
+        <div class="app-card__badges">
+          <span class="app-badge">{{ app.platform === 'android' ? 'Android' : 'Web' }}</span>
+          <span
+            v-if="app.platform === 'android'"
+            class="app-badge"
+            :class="app.releasedToPlayStore ? 'is-released' : 'is-unreleased'"
+          >
+            {{ app.releasedToPlayStore ? 'Play Store released' : 'Not released' }}
+          </span>
+        </div>
         <h3>
           <a :href="withBase(`/apps/${app.id}/`)">{{ app.name }}</a>
         </h3>
         <p>{{ app.shortDescription }}</p>
       </div>
+    </div>
+
+    <div
+      v-if="app.playStoreUrl || app.webLinks?.length"
+      class="app-card__official-links"
+      :aria-label="`${app.name} official app links`"
+    >
+      <a v-if="app.playStoreUrl" :href="app.playStoreUrl" target="_blank" rel="noopener noreferrer">
+        Google Play
+      </a>
+      <a
+        v-for="webLink in app.webLinks"
+        :key="webLink.url"
+        :href="webLink.url"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {{ webLink.label }}
+      </a>
     </div>
 
     <div class="app-card__links" :aria-label="`${app.name} resources`">

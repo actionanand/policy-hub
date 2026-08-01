@@ -84,10 +84,14 @@ export default defineConfig({
         text: 'Apps',
         items: [
           { text: 'All apps', link: '/apps/' },
-          ...apps.map((app) => ({
+          ...apps
+            .filter(
+              (app) => app.platform === 'android' && app.releasedToPlayStore
+            )
+            .map((app) => ({
             text: app.name,
             link: `/apps/${app.id}/`
-          }))
+            }))
         ]
       },
       { text: 'Contact', link: '/contact' },

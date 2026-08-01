@@ -8,6 +8,13 @@ export interface AppDocumentInfo {
   standaloneUrl: string
 }
 
+export type AppPlatform = 'web' | 'android'
+
+export interface AppWebLink {
+  label: string
+  url: string
+}
+
 export interface AppInfo {
   id: string
   name: string
@@ -18,7 +25,11 @@ export interface AppInfo {
    * Omit this field to display the app's initial instead.
    */
   icon?: string
+  platform: AppPlatform
+  releasedToPlayStore: boolean
   playStoreUrl?: string
+  /** Browser-accessible app links. A maximum of three links is supported. */
+  webLinks?: AppWebLink[]
   githubUrl?: string
   documents: AppDocumentInfo[]
 }
@@ -87,16 +98,32 @@ export const apps: AppInfo[] = [
     name: 'Spendzo',
     shortDescription: 'A personal expense and budget-tracking application.',
     icon: '/apps/spendzo/icon.png',
+    platform: 'android',
+    releasedToPlayStore: true,
+    playStoreUrl:
+      'https://play.google.com/store/apps/details?id=com.actionanand.spendzo.app',
+    webLinks: [
+      {
+        label: 'Open Spendzo in browser',
+        url: 'https://actionanand.github.io/spendzo/'
+      }
+    ],
     documents: createDocuments('spendzo')
-    // Add playStoreUrl and githubUrl after the real listings are available.
   },
   {
     id: 'stillora',
     name: 'Stillora',
     shortDescription: 'A relaxation, meditation and ambient-sound application.',
     icon: '/apps/stillora/icon.png',
+    platform: 'android',
+    releasedToPlayStore: true,
+    webLinks: [
+      {
+        label: 'Open Stillora in browser',
+        url: 'https://actionanand.github.io/stillora/'
+      }
+    ],
     documents: createDocuments('stillora')
-    // Add playStoreUrl and githubUrl after the real listings are available.
   },
   {
     id: 'vault-nest',
@@ -104,6 +131,14 @@ export const apps: AppInfo[] = [
     shortDescription:
       'A private, offline-first password and sensitive-information manager.',
     icon: '/apps/vault-nest/icon.png',
+    platform: 'android',
+    releasedToPlayStore: true,
+    webLinks: [
+      {
+        label: 'Open Vault Nest in browser',
+        url: 'https://actionanand.github.io/vault-nest/'
+      }
+    ],
     githubUrl: 'https://github.com/actionanand/vault-nest',
     documents: createDocuments('vault-nest')
   },
@@ -113,6 +148,14 @@ export const apps: AppInfo[] = [
     shortDescription:
       'A private, offline-first credit-card and personal-finance organizer.',
     icon: '/apps/card-nest/icon.png',
+    platform: 'android',
+    releasedToPlayStore: true,
+    webLinks: [
+      {
+        label: 'Open Card Nest in browser',
+        url: 'https://actionanand.github.io/card-nest/'
+      }
+    ],
     githubUrl: 'https://github.com/actionanand/card-nest',
     documents: createDocuments('card-nest')
   },
@@ -122,6 +165,14 @@ export const apps: AppInfo[] = [
     shortDescription:
       'A private, offline-first bookmark manager with profiles and nested folders.',
     icon: '/apps/link-deck/icon.png',
+    platform: 'android',
+    releasedToPlayStore: true,
+    webLinks: [
+      {
+        label: 'Open Link Deck in browser',
+        url: 'https://actionanand.github.io/link-deck/'
+      }
+    ],
     githubUrl: 'https://github.com/actionanand/link-deck',
     documents: createDocuments('link-deck')
   },
@@ -131,6 +182,14 @@ export const apps: AppInfo[] = [
     shortDescription:
       'A private, offline contact organizer with optional call-history tools.',
     icon: '/apps/who-called/icon.png',
+    platform: 'android',
+    releasedToPlayStore: true,
+    webLinks: [
+      {
+        label: 'Open Who Called in browser',
+        url: 'https://actionanand.github.io/who-called/'
+      }
+    ],
     githubUrl: 'https://github.com/actionanand/who-called',
     documents: createDocuments('who-called')
   },
@@ -140,10 +199,31 @@ export const apps: AppInfo[] = [
     shortDescription:
       'A movie and TV discovery app with TMDb details and a curated collection.',
     icon: '/apps/arflix/icon.png',
+    platform: 'android',
+    releasedToPlayStore: true,
+    webLinks: [
+      {
+        label: 'Open ARFlix in browser',
+        url: 'https://actionanand.github.io/arflix/'
+      },
+      {
+        label: 'Open legacy ARFlix in browser',
+        url: 'https://actionanand.github.io/ar-flix/'
+      }
+    ],
     githubUrl: 'https://github.com/actionanand/arflix',
     documents: createDocuments('arflix')
   }
 ]
+
+for (const app of apps) {
+  if ((app.webLinks?.length ?? 0) > 3) {
+    throw new Error(`${app.id} supports a maximum of three web links`)
+  }
+  if (app.playStoreUrl && !app.releasedToPlayStore) {
+    throw new Error(`${app.id} cannot have a Play Store URL before release`)
+  }
+}
 
 export function getApp(appId: string): AppInfo | undefined {
   return apps.find((app) => app.id === appId)
