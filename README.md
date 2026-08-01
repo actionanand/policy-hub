@@ -417,7 +417,9 @@ Each app also has a release-notes route, such as
 `/apps/spendzo/release-notes`. The reusable formatter stores no release content:
 select a supported locale, enter up to 500 Unicode characters, and copy the
 generated `<locale>` block into Play Console. Only use locales that have been
-added to that app's store listing.
+added to that app's store listing. English generic-note templates can populate
+the editor with the app name inserted automatically; review and edit the result
+before publishing.
 
 ## Google Play privacy-policy checklist
 

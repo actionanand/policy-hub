@@ -12,4 +12,4 @@ aside: false
 Format user-facing changes for the **What's new in this release?** field in
 Google Play Console. The formatter is reusable and does not save release data.
 
-<ReleaseNotesFormatter />
+<ReleaseNotesFormatter app-name="Spendzo" />

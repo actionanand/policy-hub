@@ -2,12 +2,21 @@
 import { computed, onBeforeUnmount, ref } from 'vue'
 import { playStoreLocales } from '../../data/play-store-locales'
 
+const props = defineProps<{ appName: string }>()
 const characterLimit = 500
 const locale = ref('en-US')
 const notes = ref('')
+const selectedTemplate = ref('maintenance')
 const output = ref<HTMLTextAreaElement>()
 const status = ref('')
 let resetTimer: ReturnType<typeof setTimeout> | undefined
+
+const templates = [
+  { id: 'maintenance', label: 'Minor fixes and performance' },
+  { id: 'reliability', label: 'Reliability improvements' },
+  { id: 'polish', label: 'Interface and usability polish' },
+  { id: 'first-release', label: 'First release' }
+] as const
 
 const characterCount = computed(() => Array.from(notes.value).length)
 const formattedNotes = computed(() => {
@@ -18,6 +27,19 @@ const formattedNotes = computed(() => {
 function updateNotes(event: Event) {
   const value = (event.target as HTMLTextAreaElement).value
   notes.value = Array.from(value).slice(0, characterLimit).join('')
+}
+
+function applyTemplate() {
+  const templateText: Record<string, string> = {
+    maintenance: `This update includes minor bug fixes and performance improvements for ${props.appName}.`,
+    reliability: `We've made ${props.appName} smoother and more reliable.\n\n• Improved performance\n• Fixed minor issues\n• Refined the overall app experience`,
+    polish: `This ${props.appName} update includes interface refinements, usability improvements, and minor fixes for a smoother overall experience.`,
+    'first-release': `Welcome to the first release of ${props.appName}!\n\nThis release introduces the core app experience with a focus on simplicity, reliability, and smooth performance.`
+  }
+
+  notes.value = Array.from(templateText[selectedTemplate.value])
+    .slice(0, characterLimit)
+    .join('')
 }
 
 async function copyFormattedNotes() {
@@ -62,6 +84,25 @@ onBeforeUnmount(() => {
     </div>
 
     <div class="release-notes-formatter__controls">
+      <div class="release-notes-formatter__template">
+        <label>
+          <span>Generic note</span>
+          <select v-model="selectedTemplate">
+            <option
+              v-for="item in templates"
+              :key="item.id"
+              :value="item.id"
+            >
+              {{ item.label }}
+            </option>
+          </select>
+        </label>
+        <button type="button" @click="applyTemplate">Use generic note</button>
+        <small>
+          Inserts an editable English note and adds {{ appName }} automatically.
+        </small>
+      </div>
+
       <label class="release-notes-formatter__locale">
         <span>Language</span>
         <select v-model="locale">
@@ -119,7 +160,8 @@ onBeforeUnmount(() => {
 
     <p class="release-notes-formatter__hint">
       Only choose languages already added to the app's Google Play store listing.
-      Translate the notes yourself before selecting another language.
+      Generic notes are written in English; translate them yourself before
+      selecting another language.
     </p>
   </section>
 </template>

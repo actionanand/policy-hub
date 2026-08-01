@@ -1,105 +1,93 @@
 # Privacy Policy for Stillora
 
-> **Sample content — review before publishing.** This policy must match the
-> app’s real behaviour. The Google Play Console Data Safety form must match this
-> policy. Disclose all third-party SDK behaviour and app permissions accurately.
+**Effective Date:** August 1, 2026  
+**Last Updated:** August 1, 2026
 
-**Effective Date:** [Month DD, YYYY]  
-**Last Updated:** [Month DD, YYYY]
+## Overview
 
-## Introduction
+Stillora is an offline-first ambient sound application developed by
+**actionanand**. It does not require an account and does not include advertising,
+analytics, tracking, crash reporting, or cloud sync.
 
-This sample explains how **Stillora**, a relaxation, meditation and
-ambient-sound application, may handle information. Replace every bracketed item
-and revise each section to describe the released app exactly.
+## Information Stored on Your Device
 
-## Developer Information
+Stillora stores the settings and content you create within the app, including:
 
-- **Developer:** [Developer or company name]
-- **Location:** [Country or region, if appropriate]
-- **Privacy contact:** [App-specific privacy email]
+- Theme, volume, timer, sound-transition, and playback preferences
+- The last selected sound and background
+- Active sound-mix layers and their volume levels
+- Saved mix names, selected sounds, and creation dates
 
-## Information the App Accesses
+This information is stored locally in the app's private storage. The developer
+does not receive it.
 
-Describe information the app can read or access, such as [saved sound mixes,
-sleep timers, favourites, downloaded audio, or other actual inputs]. Remove
-anything the app does not access.
+## Audio and Video
 
-## Information the App Collects
-
-State whether information leaves the device. If data is collected, list each
-data type, whether collection is required or optional, and how it is obtained.
-Account for network requests made by any media or service SDK.
-
-## How Information Is Used
-
-Explain each real purpose, for example [playing audio, saving preferences,
-restoring a session, responding to support requests, or another verified
-purpose].
-
-## Local Data Storage
-
-Explain which preferences, favourites, downloaded media, and other information
-are stored locally. Describe what happens to each category when the app is
-uninstalled.
+Stillora's sound and moving-background files are included with the app. They are
+played locally and are not streamed from a media service.
 
 ## Backup and Restore
 
-Describe any platform or in-app backup behaviour, including what is backed up
-and who can access it. If backups are disabled, confirm that this matches the
-published application.
+When you choose **Export backup**, Stillora creates a JSON file containing your
+local settings and saved mixes. You choose where to save or share that file.
+When you choose **Import backup**, Stillora reads only the backup file you
+select. Backup files are not uploaded to the developer.
+
+You are responsible for protecting exported backup files and deleting copies
+you no longer need.
+
+## Network Requests and Third-Party Services
+
+Stillora does not use advertising, analytics, or cloud-storage services. Its
+interface references Google Fonts. When the app can access the internet, the
+device may request font resources from Google. Google may receive standard
+connection information such as the device's IP address, user agent, and request
+time. Google's handling of that information is governed by the
+[Google Privacy Policy](https://policies.google.com/privacy).
+
+The core sound, video, timer, mixing, and settings features do not require a
+network connection.
 
 ## Device Permissions
 
-List every permission requested by the published build and explain its purpose.
-Example placeholders: [notifications], [foreground service for audio playback],
-and [network access]. Delete permissions that are not requested.
+The reviewed source does not use the camera, microphone, location, contacts,
+phone, SMS, or advertising identifier. Internet access may be available to the
+Android application for web content such as the Google-hosted font resources
+described above.
 
 ## Data Sharing
 
-Identify every recipient of user data and the reason for sharing. Verify the
-behaviour of hosting, streaming, crash-reporting, and other libraries before
-stating that data is not shared.
+Stillora does not sell user information. The developer does not receive or
+share the settings, sound selections, or mixes stored by the app. Limited
+technical connection information may be processed by Google when font resources
+are requested, as described above.
 
-## Third-Party Services and SDKs
+If you contact the developer by email, the information you include is used only
+to respond to your request and address related support or privacy matters.
 
-List each third-party service or SDK, its purpose, the data it may process, and
-a link to its privacy information. Use `[No third-party services — verify]`
-only when the production build contains none.
+## Data Retention and Deletion
 
-## Data Security
+Local settings and saved mixes remain on the device until you clear Stillora's
+app data or uninstall the app. Exported backup files remain wherever you saved
+or shared them and must be deleted separately.
 
-Describe safeguards that are actually implemented, such as [platform-provided
-storage controls, HTTPS connections, access controls, or download validation].
-No system is completely secure, so avoid guarantees.
+Stillora has no account or developer-operated cloud database, so there is no
+server-side app account data to request for deletion.
 
-## Data Retention
+## Children's Privacy
 
-State how long each collected or stored data category is retained and the
-criteria used to determine that period. Cover support messages and server-side
-records, if any.
+Stillora does not knowingly collect personal information from children. Because
+the app has no account system, users should not enter personal or sensitive
+information in saved mix names.
 
-## Data Deletion
+## Changes to This Policy
 
-Explain how a user deletes preferences, downloads, and any server-side data.
-Describe any external request process, what may be retained, and the expected
-completion period.
+This policy may be updated when Stillora's features or data practices change.
+The effective and last-updated dates will be revised when changes are published.
 
-## Children’s Privacy
+## Contact
 
-State the intended age group and describe the actual handling of children’s
-data. Do not claim an age restriction or compliance standard unless it applies
-to the app and has been reviewed.
+For privacy questions about Stillora, contact:
 
-## Changes to This Privacy Policy
-
-Explain how material policy changes will be communicated and update the date at
-the top whenever the policy changes.
-
-## Contact Us
-
-For questions or requests about this policy, contact:
-
-- **Email:** [App-specific privacy email]
-- **Developer:** [Developer or company name]
-- **Postal address, if required:** [Address]
+- **Developer:** actionanand
+- **Email:** anand.official.in@gmail.com
