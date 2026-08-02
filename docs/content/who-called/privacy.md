@@ -1,7 +1,7 @@
 # Privacy Policy for Who Called
 
 **Effective Date:** August 1, 2026  
-**Last Updated:** August 1, 2026
+**Last Updated:** August 3, 2026
 
 ## Overview
 
@@ -15,9 +15,11 @@ Who Called stores records encrypted with AES-256-GCM in local IndexedDB. These
 records can include:
 
 - Private contact names, companies, phone numbers, email addresses, social
-  links, birth dates, notes, favourites, hidden status, and WhatsApp preferences
+  links, birth dates, up to three named anniversary dates, reminder choices,
+  notes, favourites, hidden status, and WhatsApp preferences
 - Saved messages that you manually enter, paste, or share to the app, including
-  titles, senders, categories, detected codes, and favourites
+  titles, senders, categories, detected codes, favourites, and saved bold or
+  highlight formatting ranges
 - Tags and notes for unknown numbers, appearance counts, and last-seen dates
 - Country, theme, privacy, call-history, security, and other app settings
 
@@ -42,12 +44,29 @@ permission; denying permission leaves the rest of the app available.
 Who Called does not read Android Contacts, the SMS inbox, notification content,
 or recorded call audio.
 
-## Calling, SMS, and WhatsApp
+## Optional Birthday and Anniversary Reminders
+
+On Android, you can optionally schedule a birthday or anniversary reminder for
+a contact. The app requests notification permission only when you enable a
+reminder. Enabled reminders are scheduled locally through Android to repeat
+yearly at approximately 6:00 AM.
+
+A reminder can display the contact's name and the birthday or named anniversary
+in an Android notification. Android controls notification delivery, lock-screen
+visibility, and timing. Reminder schedules and preferences are not sent to the
+developer. Web builds retain reminder choices in the encrypted local record but
+do not display browser notifications.
+
+## Calling, SMS, WhatsApp, and Web Links
 
 Who Called can pass a phone number to the Android dialer, pass a number and
 draft text to the SMS composer, or open a WhatsApp or WhatsApp Business chat
 using a `wa.me` link. These actions occur only after your request. The app does
 not silently place a call or send a message.
+
+Web addresses detected inside a saved message become actionable only within
+that message view. Who Called shows a confirmation before passing the selected
+address to your browser. You can cancel or copy the address instead.
 
 The selected external app receives the phone number and any draft message you
 provide. WhatsApp, your carrier, phone app, SMS app, browser, and other handlers
@@ -99,6 +118,7 @@ Depending on the Android build and features you choose, Who Called may use:
 
 - Call-log access for optional, user-enabled recent call history
 - Biometric authentication for optional app unlock
+- Notification access for optional birthday and anniversary reminders
 - File or document access for backup, restore, contact import, and export
 - Clipboard access for explicit paste and copy actions
 - Package visibility to offer installed WhatsApp or WhatsApp Business handlers
@@ -112,6 +132,9 @@ microphone, or phone-call placement permissions.
 Contacts moved to Trash remain encrypted locally for up to 30 days unless you
 restore or permanently delete them sooner. Expired trashed contacts are removed
 when the app loads. Saved messages and tagged numbers remain until deleted.
+Trashing or permanently deleting a contact cancels that contact's scheduled
+birthday and anniversary reminders; restoring the contact reschedules reminders
+that remain enabled.
 
 Clearing app/site storage or uninstalling removes the local database. It does
 not remove backups, CSV files, or vCard files saved or shared elsewhere. Delete
