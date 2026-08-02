@@ -10,6 +10,7 @@ Private Contacts
 
 • Save names, companies, and multiple phone numbers
 • Add email addresses, social links, birth dates, and notes
+• Save up to three named anniversaries for each contact
 • Mark favourite or hidden contacts
 • Identify numbers that use WhatsApp
 • Search by contact details or partial phone number
@@ -17,7 +18,9 @@ Private Contacts
 
 Optional Call History
 
-On supported Android builds, choose whether to display recent phone call history after granting permission.
+On supported and policy-eligible Android builds, choose whether to display
+recent phone call history after granting permission. Availability can vary by
+distribution channel and Android permission eligibility.
 
 • Review incoming, outgoing, missed, rejected, blocked, and voicemail entries
 • See call time and duration where available
@@ -38,9 +41,24 @@ Who Called never silently places a call or sends a message.
 
 Saved Messages and Number Tags
 
-Save important text you manually enter, paste, or share to the app. Organize messages by title, sender, category, and favourites. The app can detect useful OTP or reference codes within text you choose to save.
+Save important text you manually enter, paste, or share to the app. Organize
+messages by title, sender, category, and favourites. The app can detect useful
+OTP or reference codes within text you choose to save. Highlight or bold
+selected text after saving, and use confirmed actions for detected phone
+numbers and web links.
 
 Attach temporary tags and notes to unknown phone numbers without creating complete contacts.
+
+Keepsakes and Reminders
+
+• Review birthdays and anniversaries for today, this week, this month, past month, next month, and upcoming dates
+• Use a calendar view to track events with their contacts
+• Optionally schedule one yearly Android reminder at approximately 6:00 AM
+• Manage enabled reminders from the Alert Directory
+• Disable one reminder or all reminders for a contact at any time
+
+Notification permission is requested only when you enable a reminder. Web
+builds do not display birthday or anniversary notifications.
 
 Backup and Portability
 

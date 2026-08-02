@@ -9,8 +9,9 @@ saved messages, call logs, or backup files.
 ## Common help
 
 - **Call history unavailable:** use an Android build that includes the feature,
-  enable it in the app, and grant call-log permission. Other features work
-  without this permission.
+  enable it in the app, and grant call-log permission. Distribution policy can
+  require this feature to be omitted. Other features work without this
+  permission.
 - **Forgotten PIN:** the PIN is not recoverable. Clearing app storage or
   reinstalling also removes local data; preserve a usable backup beforehand.
 - **Biometric unlock unavailable:** use the PIN and confirm Android has a
@@ -21,3 +22,12 @@ saved messages, call logs, or backup files.
   and check the complete international phone number.
 - **Contact import fails:** choose a valid vCard or CSV file with required name
   and phone information.
+- **Reminder does not appear:** reminders are available only in the Android app.
+  Enable “Remind me,” grant notification permission, and confirm notifications
+  are enabled for Who Called in Android settings. Battery optimization can delay
+  the approximately 6:00 AM delivery time.
+- **Wrong birthday or anniversary reminder:** edit the contact and verify its
+  month, day, optional year, anniversary name, and reminder switch. The Alert
+  Directory can disable individual reminders or all reminders for a contact.
+- **Detected link or phone number does not open:** select the detected item in
+  the full saved-message view and confirm the requested external action.
