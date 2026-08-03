@@ -10,11 +10,17 @@ numbers, and settings as AES-GCM-encrypted records in local IndexedDB. Optional
 PIN verification data is stored as a salted PBKDF2 verifier. Android handles
 biometric verification without giving the app biometric templates.
 
-## Optional call history
+## Android call log
 
-When supported, enabled, and permitted, the app reads recent call numbers,
-cached names, types, times, and durations for on-screen recent activity. This
-list is not saved in the app database, backups, or contact exports.
+The released Android app uses `android.permission.READ_CALL_LOG` only after the
+user enables recent calls and grants Android's runtime permission. It reads at
+most 100 recent entries—the number, cached caller name when available, call
+type, date and time, and duration—to display call history on the homepage and
+perform local contact or tag matching.
+
+The list is held temporarily for the app session. It is not saved in the app
+database, backups, or contact exports and is not sent to the developer. Who
+Called does not request SMS-reading permission or read SMS or MMS content.
 
 ## Optional local notifications
 

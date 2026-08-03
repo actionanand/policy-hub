@@ -28,21 +28,30 @@ IndexedDB. The developer does not receive the database or encryption key. Who
 Called does not store application records in localStorage, sessionStorage, or
 cookies.
 
-## Optional Device Call History
+## Android Call Log Permission and Recent Calls
 
-Some Android builds include an optional phone call-history feature. It is off
-until you enable it and grant Android's call-log permission. When used, Who
-Called can read recent call numbers, cached caller names, call types, times, and
-durations from the device call log to display recent activity and match entries
-against local contacts or tags.
+The released Android app declares and requests
+`android.permission.READ_CALL_LOG`. This permission is used only to show the
+phone's recent call history on the Who Called homepage and to match those calls
+locally against private contacts or tagged numbers in the app.
 
-The retrieved call-history list is held temporarily for the current app session
-and is not written to Who Called's database, backups, CSV files, or vCard files.
-Disabling the setting stops future retrieval. Android controls the call log and
-permission; denying permission leaves the rest of the app available.
+Who Called reads at most the 100 most recent call-log entries after you enable
+the feature and grant Android's runtime permission. For each entry, the app can
+read the phone number, cached caller name when available, call type (such as
+incoming, outgoing, missed, rejected, blocked, or voicemail), date and time,
+and call duration.
 
-Who Called does not read Android Contacts, the SMS inbox, notification content,
-or recorded call audio.
+The retrieved call-history list is processed on the device and held temporarily
+for the current app session. It is not written to Who Called's database,
+backups, CSV files, or vCard files, and it is not transmitted to the developer
+or a developer-operated server. Disabling the setting stops future retrieval.
+Android controls the permission, and denying or revoking it leaves the rest of
+the app available.
+
+`READ_CALL_LOG` does not give Who Called access to SMS content. Who Called does
+not request an SMS-reading permission and does not read the SMS inbox, sent
+messages, one-time passwords from SMS, or MMS content. It also does not read
+Android Contacts, notification content, or recorded call audio.
 
 ## Optional Birthday and Anniversary Reminders
 
@@ -104,9 +113,12 @@ choose.
 
 ## Information Collected by the Developer
 
-The developer does not receive contacts, call history, messages, tagged numbers,
-PINs, backup passphrases, device identifiers, or usage telemetry. Who Called
-does not sell user information.
+The developer does not receive contacts, call history, user-saved text,
+tagged numbers, PINs, backup passphrases, device identifiers, or usage
+telemetry. Who Called does not sell user information. References to saved
+messages in this policy mean text that a user manually enters, pastes, or
+explicitly shares to Who Called; they do not mean messages read from the SMS
+inbox.
 
 If you email support, the developer receives only the information you choose to
 include and uses it to respond. Do not email PINs, private contact collections,
@@ -116,7 +128,8 @@ saved messages, call logs, or backup files.
 
 Depending on the Android build and features you choose, Who Called may use:
 
-- Call-log access for optional, user-enabled recent call history
+- `android.permission.READ_CALL_LOG` to display up to 100 recent calls on the
+  homepage after the user enables the feature and grants permission
 - Biometric authentication for optional app unlock
 - Notification access for optional birthday and anniversary reminders
 - File or document access for backup, restore, contact import, and export
@@ -124,8 +137,9 @@ Depending on the Android build and features you choose, Who Called may use:
 - Package visibility to offer installed WhatsApp or WhatsApp Business handlers
 - Android's share target for text you deliberately send to the app
 
-The reviewed app does not require Android Contacts, SMS inbox, location,
-microphone, or phone-call placement permissions.
+The reviewed app does not request permission to read SMS or MMS content and
+does not require Android Contacts, location, microphone, or phone-call
+placement permissions.
 
 ## Retention and Deletion
 
