@@ -117,6 +117,8 @@ export const apps: AppInfo[] = [
     icon: '/apps/stillora/icon.png',
     platform: 'android',
     releasedToPlayStore: true,
+    playStoreUrl:
+      'https://play.google.com/store/apps/details?id=com.actionanand.stillora.app',
     webLinks: [
       {
         label: 'Open Stillora in browser',
@@ -133,6 +135,8 @@ export const apps: AppInfo[] = [
     icon: '/apps/vault-nest/icon.png',
     platform: 'android',
     releasedToPlayStore: true,
+    playStoreUrl:
+      'https://play.google.com/store/apps/details?id=com.actionanand.vaultnest.app',
     webLinks: [
       {
         label: 'Open Vault Nest in browser',
@@ -150,6 +154,8 @@ export const apps: AppInfo[] = [
     icon: '/apps/card-nest/icon.png',
     platform: 'android',
     releasedToPlayStore: true,
+    playStoreUrl:
+      'https://play.google.com/store/apps/details?id=com.actionanand.cardnest.app',
     webLinks: [
       {
         label: 'Open Card Nest in browser',
@@ -167,6 +173,8 @@ export const apps: AppInfo[] = [
     icon: '/apps/link-deck/icon.png',
     platform: 'android',
     releasedToPlayStore: true,
+    playStoreUrl:
+      'https://play.google.com/store/apps/details?id=com.actionanand.linkdeck.app',
     webLinks: [
       {
         label: 'Open Link Deck in browser',
@@ -184,6 +192,8 @@ export const apps: AppInfo[] = [
     icon: '/apps/who-called/icon.png',
     platform: 'android',
     releasedToPlayStore: true,
+    playStoreUrl:
+      'https://play.google.com/store/apps/details?id=com.actionanand.whocalled.app',
     webLinks: [
       {
         label: 'Open Who Called in browser',
@@ -201,6 +211,8 @@ export const apps: AppInfo[] = [
     icon: '/apps/arflix/icon.png',
     platform: 'android',
     releasedToPlayStore: true,
+    playStoreUrl:
+      'https://play.google.com/store/apps/details?id=com.actionanand.arflix.app',
     webLinks: [
       {
         label: 'Open ARFlix in browser',
@@ -230,6 +242,25 @@ export const apps: AppInfo[] = [
     ],
     githubUrl: 'https://github.com/actionanand/office-pulse',
     documents: createDocuments('office-pulse')
+  },
+  {
+    id: 'personix',
+    name: 'Personix',
+    shortDescription:
+      'A private personal organizer for links, family records, vehicles, notes, and checklists.',
+    icon: '/apps/personix/icon.png',
+    platform: 'android',
+    releasedToPlayStore: true,
+    playStoreUrl:
+      'https://play.google.com/store/apps/details?id=com.actionanand.personix.app',
+    webLinks: [
+      {
+        label: 'Open Personix in browser',
+        url: 'https://actionanand.github.io/personix/'
+      }
+    ],
+    githubUrl: 'https://github.com/actionanand/personix',
+    documents: createDocuments('personix')
   },
   {
     id: 'expenzo',
