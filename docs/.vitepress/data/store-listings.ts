@@ -7,6 +7,7 @@ import linkDeckSource from '../../content/link-deck/store-listing.md?raw'
 import whoCalledSource from '../../content/who-called/store-listing.md?raw'
 import arflixSource from '../../content/arflix/store-listing.md?raw'
 import officePulseSource from '../../content/office-pulse/store-listing.md?raw'
+import personixSource from '../../content/personix/store-listing.md?raw'
 import expenzoSource from '../../content/expenzo/store-listing.md?raw'
 import arTamilJathagamSource from '../../content/ar-tamil-jathagam/store-listing.md?raw'
 import linguaLogSource from '../../content/lingua-log/store-listing.md?raw'
@@ -29,6 +30,7 @@ const listingSources: Record<string, string> = {
   'who-called': whoCalledSource,
   arflix: arflixSource,
   'office-pulse': officePulseSource,
+  personix: personixSource,
   expenzo: expenzoSource,
   'ar-tamil-jathagam': arTamilJathagamSource,
   'lingua-log': linguaLogSource,
