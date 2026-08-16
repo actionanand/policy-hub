@@ -131,7 +131,7 @@ export const apps: AppInfo[] = [
     id: 'vault-nest',
     name: 'Vault Nest',
     shortDescription:
-      'A private, offline-first password and sensitive-information manager.',
+      'A private, offline-first password manager for Android and Wear OS.',
     icon: '/apps/vault-nest/icon.png',
     platform: 'android',
     releasedToPlayStore: true,
