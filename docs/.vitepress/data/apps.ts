@@ -204,6 +204,25 @@ export const apps: AppInfo[] = [
     documents: createDocuments('who-called')
   },
   {
+    id: 'click2chat',
+    name: 'Click2Chat',
+    shortDescription:
+      'View recent calls and start WhatsApp chats without saving contacts.',
+    icon: '/apps/click2chat/icon.png',
+    platform: 'android',
+    releasedToPlayStore: true,
+    playStoreUrl:
+      'https://play.google.com/store/apps/details?id=com.actionanand.click2chat.app',
+    webLinks: [
+      {
+        label: 'Open Click2Chat in browser',
+        url: 'https://actionanand.github.io/click2chat/'
+      }
+    ],
+    githubUrl: 'https://github.com/actionanand/click2chat',
+    documents: createDocuments('click2chat')
+  },
+  {
     id: 'arflix',
     name: 'ARFlix',
     shortDescription:
