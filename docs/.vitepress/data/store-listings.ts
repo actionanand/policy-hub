@@ -5,6 +5,7 @@ import vaultNestSource from '../../content/vault-nest/store-listing.md?raw'
 import cardNestSource from '../../content/card-nest/store-listing.md?raw'
 import linkDeckSource from '../../content/link-deck/store-listing.md?raw'
 import whoCalledSource from '../../content/who-called/store-listing.md?raw'
+import click2chatSource from '../../content/click2chat/store-listing.md?raw'
 import arflixSource from '../../content/arflix/store-listing.md?raw'
 import officePulseSource from '../../content/office-pulse/store-listing.md?raw'
 import personixSource from '../../content/personix/store-listing.md?raw'
@@ -28,6 +29,7 @@ const listingSources: Record<string, string> = {
   'card-nest': cardNestSource,
   'link-deck': linkDeckSource,
   'who-called': whoCalledSource,
+  click2chat: click2chatSource,
   arflix: arflixSource,
   'office-pulse': officePulseSource,
   personix: personixSource,
