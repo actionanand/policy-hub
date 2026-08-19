@@ -128,6 +128,25 @@ export const apps: AppInfo[] = [
     documents: createDocuments('stillora')
   },
   {
+    id: 'flowra',
+    name: 'Flowra',
+    shortDescription:
+      'A private, offline-first period and cycle tracker with on-device insights.',
+    icon: '/apps/flowra/icon.png',
+    platform: 'android',
+    releasedToPlayStore: true,
+    playStoreUrl:
+      'https://play.google.com/store/apps/details?id=com.actionanand.flowra.app',
+    webLinks: [
+      {
+        label: 'Open Flowra in browser',
+        url: 'https://actionanand.github.io/flowra/'
+      }
+    ],
+    githubUrl: 'https://github.com/actionanand/flowra',
+    documents: createDocuments('flowra')
+  },
+  {
     id: 'vault-nest',
     name: 'Vault Nest',
     shortDescription:
