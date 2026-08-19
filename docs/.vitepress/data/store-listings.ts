@@ -15,6 +15,7 @@ import linguaLogSource from '../../content/lingua-log/store-listing.md?raw'
 import scrollixSource from '../../content/scrollix/store-listing.md?raw'
 import arblogzSource from '../../content/arblogz/store-listing.md?raw'
 import artamizhsolaiSource from '../../content/artamizhsolai/store-listing.md?raw'
+import flowraSource from '../../content/flowra/store-listing.md?raw'
 
 export interface StoreListing {
   appId: string
@@ -38,7 +39,8 @@ const listingSources: Record<string, string> = {
   'lingua-log': linguaLogSource,
   scrollix: scrollixSource,
   arblogz: arblogzSource,
-  artamizhsolai: artamizhsolaiSource
+  artamizhsolai: artamizhsolaiSource,
+  flowra: flowraSource
 }
 
 function parseShortDescription(frontmatter: string, appId: string): string {
