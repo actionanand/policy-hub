@@ -38,6 +38,6 @@ Flowra has no sign-in, advertising, analytics, tracking, or developer-operated c
 
 Inclusive and Flexible
 
-Choose from multiple interface languages, light or dark appearance, flexible age details, optional first-period information, and user-selected reproductive life stages. Exact birth dates are never required.
+Choose from multiple interface languages, light or dark appearance, flexible age details, optional first-period information, and user-selected reproductive life stages. The supported interface languages are தமிழ் (Tamizh), English, संस्कृतम् (Sanskrit), हिन्दी (Hindi), ಕನ್ನಡ (Kannada), తెలుగు (Telugu), मराठी (Marathi), മലയാളം (Malayalam), ગુજરાતી (Gujarati), বাংলা (Bengali), اردو (Urdu), ଓଡ଼ିଆ (Odia), ਪੰਜਾਬੀ (Punjabi), සිංහල (Sinhala), 简体中文 (Simplified Chinese), 繁體中文 (Traditional Chinese), Français (French), Español (Spanish), العربية (Arabic), Čeština (Czech), Português (Portuguese), Deutsch (German), Русский (Russian), Bahasa Indonesia (Indonesian), 日本語 (Japanese), and 한국어 (Korean). Exact birth dates are never required.
 
 Flowra helps you notice and describe personal patterns. It is not a medical device and does not diagnose, treat, or provide contraception or fertility advice.
