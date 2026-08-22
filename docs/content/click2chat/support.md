@@ -14,6 +14,9 @@ messages, clipboard contents, or call logs.
   require the permission to be omitted.
 - **Permission was denied:** direct-number chat continues to work without call
   history. Android controls whether the permission prompt can appear again.
+- **Calling a recent number:** tap the phone icon, review the confirmation, and
+  choose **Call** to open Android's phone dialler. Click2Chat does not place the
+  call automatically.
 - **WhatsApp does not open:** install WhatsApp or WhatsApp Business and verify
   the complete international phone number.
 - **The wrong country appears:** change the calling code or choose a country

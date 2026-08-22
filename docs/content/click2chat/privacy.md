@@ -1,7 +1,7 @@
 # Privacy Policy for Click2Chat
 
 **Effective Date:** August 17, 2026  
-**Last Updated:** August 17, 2026
+**Last Updated:** August 22, 2026
 
 ## Overview
 
@@ -36,6 +36,17 @@ developer server. It does not alter or delete the Android call log.
 
 Click2Chat does not request permission to read Android Contacts, SMS or MMS
 content, recorded call audio, the microphone, location, or device files.
+
+## Phone Dialler
+
+The phone button beside a recent call first displays a confirmation in
+Click2Chat. If you choose **Call**, the app passes that phone number to the
+Android phone dialler. The dialler displays the number for review, and you must
+use the phone app's Call button to place the call.
+
+Click2Chat does not place calls automatically and does not request
+`android.permission.CALL_PHONE`. Your phone app and mobile carrier process a
+call under their own terms and privacy practices.
 
 ## Numbers, Country Selection, and Messages
 
@@ -78,6 +89,7 @@ type, and request time, under its own policies. Click2Chat itself does not add
 analytics or tracking.
 
 Opening a chat creates a user-initiated connection to WhatsApp or `wa.me`.
+Opening the phone dialler passes only the selected number to the phone app.
 Apart from loading the static application and actions you initiate, Click2Chat
 does not transmit call history, phone numbers, messages, clipboard text, or
 preferences to a developer-operated service.

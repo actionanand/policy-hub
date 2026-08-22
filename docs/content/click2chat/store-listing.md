@@ -22,6 +22,7 @@ The Android build uses android.permission.READ_CALL_LOG to display recent call h
 • See cached caller names when Android provides them
 • Distinguish incoming, outgoing, missed, rejected, blocked, and voicemail calls
 • Review call time and duration when available
+• Confirm and open a recent number in the Android phone dialler
 • Start a WhatsApp chat from the message button beside a call
 
 Recent calls are held temporarily while the screen is in use. Click2Chat does not save the retrieved call list to an app database, backup, or developer server. Direct-number chat remains available if call-log permission is denied or unavailable.
@@ -34,6 +35,7 @@ Privacy by Design
 • No developer-operated cloud storage
 • No contact saving or number tagging
 • No SMS, Contacts, microphone, location, or broad storage permission
+• No permission to place phone calls automatically
 • Clipboard access occurs only when you press paste
 
 Click2Chat stores only the selected country and appearance preference locally. Phone numbers and optional messages are passed to WhatsApp only after you request the action.
