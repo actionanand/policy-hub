@@ -5,34 +5,14 @@
 
 ## Use of Click2Chat
 
-Click2Chat is provided as a recent-call viewer and communication-launching
-utility. You are responsible for entering the correct number, reviewing any
-draft message, choosing the intended recipient and application, and complying
-with applicable privacy and communications laws.
+Click2Chat is provided as a communication-launching utility. You are
+responsible for entering the correct number, reviewing any draft message,
+choosing the intended recipient and application, and complying with applicable
+privacy and communications laws.
 
-Click2Chat does not identify unknown callers, verify that a cached caller name
-is accurate, save contacts, record calls, place calls, or send WhatsApp messages
-automatically.
-
-## Call History
-
-The Android call-history feature uses `android.permission.READ_CALL_LOG` to
-display recent calls after you grant access. Android controls this permission,
-and you can deny or revoke it from the device settings without affecting the
-direct-number chat feature.
-
-Call-log information can be personal or sensitive. Use it only on devices and
-accounts you are authorized to access. Do not use Click2Chat for unlawful
-monitoring, harassment, impersonation, spam, or violation of another person's
-rights.
-
-## Phone Dialler
-
-The phone button beside a recent call displays a confirmation before opening
-the Android phone dialler with the selected number. Review the number before
-using the phone app's Call button. Click2Chat does not place calls
-automatically, and your phone app and mobile carrier control call placement,
-availability, and charges.
+Click2Chat does not verify recipient identities, save contacts, or send
+WhatsApp messages automatically. Do not use the app for unlawful monitoring,
+harassment, impersonation, spam, or violation of another person's rights.
 
 ## External Services
 
@@ -46,9 +26,8 @@ opens the external chat action; the external service completes it.
 
 ## Accuracy and Availability
 
-Country codes, cached caller names, call types, dates, and durations can be
-incomplete or inaccurate because they depend on user input, Android, the mobile
-network, and external applications.
+Country codes and phone numbers can be incomplete or inaccurate. You are
+responsible for reviewing the information before opening a conversation.
 
 Click2Chat is provided without a guarantee that it will always be available,
 error-free, compatible with every device, or suitable for emergencies,
@@ -56,9 +35,8 @@ security decisions, legal evidence, or another critical purpose.
 
 ## Device Security
 
-You are responsible for securing your device, controlling lock-screen access,
-reviewing Android permissions, and protecting information visible in recent
-calls or draft messages.
+You are responsible for securing your device and protecting phone numbers or
+draft messages visible on the screen.
 
 ## Changes
 
@@ -70,3 +48,4 @@ apply.
 
 Questions about these terms can be sent to
 **anand.official.in@gmail.com**.
+
