@@ -18,13 +18,20 @@ These preferences are stored in localStorage on the device or in the browser.
 
 ## Android call history
 
-The Android build declares `android.permission.READ_CALL_LOG`. After Android
-grants the runtime permission, Click2Chat reads at most the configured 100 most
-recent call-log entries to display them on the recent-calls screen.
+The Android build declares `android.permission.READ_CALL_LOG`. Before requesting
+it, Click2Chat displays an in-app explanation and provides **Not now** and
+**Continue** actions. Android's runtime permission dialog appears only after
+you choose Continue. After Android grants access, Click2Chat reads at most the
+configured 100 most recent call-log entries to display them on the recent-calls
+screen.
 
 An entry can contain a phone number, cached caller name when available, call
 type, date and time, and duration. The list is held temporarily in app memory.
 It is not saved, backed up, exported, or transmitted to the developer.
+
+If you decline access, Click2Chat does not read the call log or automatically
+request permission again. You can continue using direct-number chat and can
+choose to review the permission request later.
 
 Click2Chat does not request SMS, Contacts, microphone, location, or broad file
 access permission.
