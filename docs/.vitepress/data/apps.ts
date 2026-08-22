@@ -225,8 +225,7 @@ export const apps: AppInfo[] = [
   {
     id: 'click2chat',
     name: 'Click2Chat',
-    shortDescription:
-      'View recent calls and start WhatsApp chats without saving contacts.',
+    shortDescription: 'Start WhatsApp chats without saving numbers to your contacts.',
     icon: '/apps/click2chat/icon.png',
     platform: 'android',
     releasedToPlayStore: true,

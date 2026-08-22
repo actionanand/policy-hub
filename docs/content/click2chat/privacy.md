@@ -5,71 +5,29 @@
 
 ## Overview
 
-Click2Chat is an offline-first utility developed by **Anand Raja**. It lets you
-view recent calls in the Android app and start a WhatsApp or WhatsApp Business
-conversation without first saving the number as a contact.
+Click2Chat is a lightweight utility developed by **Anand Raja**. It lets you
+start a WhatsApp or WhatsApp Business conversation by entering a country code
+and phone number, without first saving that number as a contact.
 
-The app does not require an account and does not include advertising,
+Click2Chat does not require an account and does not include advertising,
 analytics, tracking, or developer-operated cloud storage.
-
-## Android Call Log Permission
-
-The released Android app declares and requests
-`android.permission.READ_CALL_LOG`. This permission is used only to display
-the phone's recent call history in Click2Chat. Before Android's permission
-dialog appears, the Recent calls screen explains which call-log information is
-accessed, how it is used, and that it is not saved, uploaded, or shared with the
-developer. The app requests permission only after you choose **Continue**.
-
-You can choose **Not now**, deny the Android permission, or revoke it later.
-Click2Chat does not automatically repeat a denied request. Direct-number chat
-remains available without call-history access.
-
-When permission is granted, Click2Chat reads at most the configured 100 most
-recent call-log entries. For each entry, the app can read:
-
-- The phone number
-- The cached caller name, when Android provides one
-- The call type, such as incoming, outgoing, missed, rejected, blocked, or
-  voicemail
-- The call date and time
-- The call duration
-
-These entries are displayed from temporary app memory. Click2Chat does not save
-the retrieved call list to a database, localStorage, a file, a backup, or a
-developer server. It does not alter or delete the Android call log.
-
-Click2Chat does not request permission to read Android Contacts, SMS or MMS
-content, recorded call audio, the microphone, location, or device files.
-
-## Phone Dialler
-
-The phone button beside a recent call first displays a confirmation in
-Click2Chat. If you choose **Call**, the app passes that phone number to the
-Android phone dialler. The dialler displays the number for review, and you must
-use the phone app's Call button to place the call.
-
-Click2Chat does not place calls automatically and does not request
-`android.permission.CALL_PHONE`. Your phone app and mobile carrier process a
-call under their own terms and privacy practices.
 
 ## Numbers, Country Selection, and Messages
 
-A phone number and optional message that you enter are held temporarily while
-you prepare the chat. Click2Chat formats this information locally. It does not
-save the number or message as an app record.
+The phone number and optional message you enter are held temporarily while you
+prepare a chat. Click2Chat formats this information locally and does not save
+the number or message as an app record.
 
-The selected country and calling code are synchronized in the interface. The
-last selected country and your light, dark, or system theme preference can be
-stored locally in browser or WebView localStorage so they can be restored the
-next time you use the app. These preferences do not identify you and are not
-sent to the developer.
+India is selected on first launch. The country and calling code remain
+synchronized when you edit either one. Your last selected country and your
+light, dark, or system theme preference can be stored locally on your device so
+they can be restored later. These preferences are not sent to the developer.
 
 ## Clipboard Access
 
-Click2Chat reads text from the clipboard only when you press the paste button.
-It does not monitor the clipboard in the background. Pasted text is placed into
-the phone-number field and is handled like text you type manually.
+Click2Chat reads clipboard text only when you press the paste button. It does
+not monitor the clipboard in the background. Pasted text is placed into the
+phone-number field and is handled like text you enter manually.
 
 ## WhatsApp and External Services
 
@@ -78,13 +36,19 @@ optional message to WhatsApp, WhatsApp Business, or the `wa.me` web service. If
 both Android applications are installed, Click2Chat lets you choose one. If
 only one is installed, the app can open it directly.
 
-The selected external application or website receives the number and message
-needed to perform the action you requested. Its own privacy policy and terms
-apply. Click2Chat does not send a WhatsApp message automatically.
+The selected service receives the number and message needed to perform the
+action you requested. Its own privacy policy and terms apply. Click2Chat does
+not send a message automatically.
 
 On Android, Click2Chat checks locally whether the WhatsApp and WhatsApp Business
 package names are available. This installed-app check is not transmitted to the
 developer.
+
+## Permissions and Device Access
+
+The Play Store build does not request access to SMS, contacts, the microphone,
+location, camera, or device files. It does not request permission to place
+phone calls.
 
 ## Network and Hosting
 
@@ -94,21 +58,18 @@ type, and request time, under its own policies. Click2Chat itself does not add
 analytics or tracking.
 
 Opening a chat creates a user-initiated connection to WhatsApp or `wa.me`.
-Opening the phone dialler passes only the selected number to the phone app.
 Apart from loading the static application and actions you initiate, Click2Chat
-does not transmit call history, phone numbers, messages, clipboard text, or
-preferences to a developer-operated service.
+does not transmit phone numbers, messages, clipboard text, or preferences to a
+developer-operated service.
 
 ## Retention and Deletion
 
-Recent call entries, typed numbers, pasted text, and draft messages are not
-persisted by Click2Chat. They leave app memory when the relevant view or app
-session ends.
+Typed numbers, pasted text, and draft messages are not persisted by Click2Chat.
+They leave app memory when the app session ends.
 
 To remove the saved country and theme preferences, clear Click2Chat storage in
 Android system settings, uninstall the Android app, or clear the site's storage
-in your browser. Android manages the device call log separately; clearing
-Click2Chat data does not delete calls from the phone's system call history.
+in your browser.
 
 Because Click2Chat has no account or developer database, the developer does not
 hold app records that can be deleted through an email request.
@@ -120,8 +81,8 @@ does not knowingly collect personal information from children through the app.
 
 ## Changes to This Policy
 
-This policy may be updated when Click2Chat's features, permissions, or data
-practices change. The dates above will be revised when an update is published.
+This policy may be updated when Click2Chat's features or data practices change.
+The dates above will be revised when an update is published.
 
 ## Contact
 
