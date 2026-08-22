@@ -223,6 +223,18 @@ export const apps: AppInfo[] = [
     documents: createDocuments('who-called')
   },
   {
+    id: 'life-leaf',
+    name: 'Life Leaf',
+    shortDescription:
+      'A private diary for writing, memories, photos, moods, and gentle reminders.',
+    icon: '/apps/life-leaf/icon.png',
+    platform: 'android',
+    releasedToPlayStore: true,
+    playStoreUrl:
+      'https://play.google.com/store/apps/details?id=com.actionanand.lifeleaf.app',
+    documents: createDocuments('life-leaf')
+  },
+  {
     id: 'click2chat',
     name: 'Click2Chat',
     shortDescription: 'Start WhatsApp chats without saving numbers to your contacts.',
