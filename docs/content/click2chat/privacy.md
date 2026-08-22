@@ -16,9 +16,14 @@ analytics, tracking, or developer-operated cloud storage.
 
 The released Android app declares and requests
 `android.permission.READ_CALL_LOG`. This permission is used only to display
-the phone's recent call history in Click2Chat. The app requests access when the
-recent-calls screen needs it. You may deny or later revoke the permission;
-direct-number chat remains available.
+the phone's recent call history in Click2Chat. Before Android's permission
+dialog appears, the Recent calls screen explains which call-log information is
+accessed, how it is used, and that it is not saved, uploaded, or shared with the
+developer. The app requests permission only after you choose **Continue**.
+
+You can choose **Not now**, deny the Android permission, or revoke it later.
+Click2Chat does not automatically repeat a denied request. Direct-number chat
+remains available without call-history access.
 
 When permission is granted, Click2Chat reads at most the configured 100 most
 recent call-log entries. For each entry, the app can read:

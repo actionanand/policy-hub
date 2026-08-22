@@ -9,11 +9,13 @@ messages, clipboard contents, or call logs.
 ## Common help
 
 - **Call history is unavailable:** call history works only in an Android build
-  that includes the feature. Grant call-log permission when Android asks, or
-  enable it from the app's Android permission settings. Distribution policy can
-  require the permission to be omitted.
+  that includes the feature. Choose **Enable recent calls**, read the in-app
+  explanation, select **Continue**, and then respond to Android's permission
+  dialog. Distribution policy can require the permission to be omitted.
 - **Permission was denied:** direct-number chat continues to work without call
-  history. Android controls whether the permission prompt can appear again.
+  history, and Click2Chat does not automatically ask again. Choose **Review
+  access** if you decide to retry. Android controls whether its permission
+  prompt can appear again.
 - **Calling a recent number:** tap the phone icon, review the confirmation, and
   choose **Call** to open Android's phone dialler. Click2Chat does not place the
   call automatically.
