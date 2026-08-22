@@ -232,6 +232,12 @@ export const apps: AppInfo[] = [
     releasedToPlayStore: true,
     playStoreUrl:
       'https://play.google.com/store/apps/details?id=com.actionanand.lifeleaf.app',
+    webLinks: [
+      {
+        label: 'Open Life Leaf in browser',
+        url: 'https://actionanand.github.io/life-leaf/'
+      }
+    ],
     documents: createDocuments('life-leaf')
   },
   {
