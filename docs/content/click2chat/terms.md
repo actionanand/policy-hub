@@ -1,7 +1,7 @@
 # Terms and Conditions for Click2Chat
 
 **Effective Date:** August 17, 2026  
-**Last Updated:** August 17, 2026
+**Last Updated:** August 22, 2026
 
 ## Use of Click2Chat
 
@@ -25,6 +25,14 @@ Call-log information can be personal or sensitive. Use it only on devices and
 accounts you are authorized to access. Do not use Click2Chat for unlawful
 monitoring, harassment, impersonation, spam, or violation of another person's
 rights.
+
+## Phone Dialler
+
+The phone button beside a recent call displays a confirmation before opening
+the Android phone dialler with the selected number. Review the number before
+using the phone app's Call button. Click2Chat does not place calls
+automatically, and your phone app and mobile carrier control call placement,
+availability, and charges.
 
 ## External Services
 

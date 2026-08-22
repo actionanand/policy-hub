@@ -1,6 +1,6 @@
 # Click2Chat Data Collection
 
-**Last reviewed:** August 17, 2026
+**Last reviewed:** August 22, 2026
 
 ## Data processed on the device
 
@@ -39,6 +39,10 @@ not monitor clipboard changes or collect clipboard contents in the background.
 When you initiate a chat, WhatsApp, WhatsApp Business, or `wa.me` receives the
 formatted number and optional message required to open the conversation. Their
 privacy practices apply to that user-initiated transfer.
+
+When you confirm a call from the recent-calls screen, the Android phone dialler
+receives the selected number. Click2Chat does not place the call automatically
+and does not request `android.permission.CALL_PHONE`.
 
 The static web host may receive ordinary web request information when the
 browser version is loaded. Click2Chat has no developer analytics, advertising,
