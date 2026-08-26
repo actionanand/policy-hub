@@ -241,6 +241,25 @@ export const apps: AppInfo[] = [
     documents: createDocuments('life-leaf')
   },
   {
+    id: 'birthday-buddy',
+    name: 'Birthday Buddy',
+    shortDescription:
+      'A private reminder for birthdays, anniversaries, and meaningful occasions.',
+    icon: '/apps/birthday-buddy/icon.png',
+    platform: 'android',
+    releasedToPlayStore: true,
+    playStoreUrl:
+      'https://play.google.com/store/apps/details?id=com.actionanand.birthdaybuddy.app',
+    webLinks: [
+      {
+        label: 'Open Birthday Buddy in browser',
+        url: 'https://actionanand.github.io/birthday-buddy/tabs/home'
+      }
+    ],
+    githubUrl: 'https://github.com/actionanand/birthday-buddy',
+    documents: createDocuments('birthday-buddy')
+  },
+  {
     id: 'click2chat',
     name: 'Click2Chat',
     shortDescription: 'Start WhatsApp chats without saving numbers to your contacts.',
