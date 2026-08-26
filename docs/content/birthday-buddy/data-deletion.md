@@ -6,7 +6,9 @@ Birthday Buddy has no developer-operated account or cloud database. Your app dat
 
 ## Delete selected information
 
-Use Birthday Buddy's person and occasion controls to remove records you no longer want. Removing a record deletes its locally stored details and app-owned photo copy. It does not delete or edit the corresponding entry in Android Contacts.
+Use Birthday Buddy's person and occasion controls to move records you no longer want to **Trash**. Reminders for trashed items stop. The record, its locally stored details, and any app-owned photo copy remain recoverable in Birthday Buddy for up to 30 days. This does not delete or edit the corresponding entry in Android Contacts.
+
+Open **Settings > Trash** to restore an item, delete an individual item permanently, or empty all Trash immediately. Items remaining in Trash are permanently deleted after 30 days when the app next initializes.
 
 Contact-sync exclusions remain local. Use the contact-sync controls to allow an ignored contact again, or clear all app data as described below.
 

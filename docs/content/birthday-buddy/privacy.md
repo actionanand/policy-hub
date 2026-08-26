@@ -74,7 +74,9 @@ Google Play processes information related to downloading, purchasing, reviewing,
 
 ## Retention and deletion
 
-App data remains on your device until you delete individual records, clear the app's storage, clear the website's stored data, or uninstall the app. Uninstalling or clearing app storage removes app-local data but does not remove exported backup files or copies saved elsewhere; delete those separately.
+Deleting a person or occasion moves it to Birthday Buddy's local Trash, stops its reminders, and schedules it for permanent deletion after 30 days. You can restore an item before that deadline, permanently delete an individual Trash item, or empty Trash immediately. Expired Trash is purged when the app initializes.
+
+Clearing the app's storage, clearing the website's stored data, or uninstalling the app removes app-local data without waiting for the Trash period. These actions do not remove exported backup files or copies saved elsewhere; delete those separately.
 
 Because Birthday Buddy does not operate an account or cloud database, there is no server-side profile to delete by email. Detailed instructions are available on the Birthday Buddy Data Deletion page.
 
