@@ -1218,6 +1218,129 @@ input {
   max-width: 420px;
 }
 
+.release-notes-formatter__options {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  padding: 14px 16px 16px;
+  background: var(--vp-c-bg);
+}
+
+.release-notes-formatter__options legend {
+  padding: 0 6px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.release-notes-formatter__options label {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: var(--vp-c-text-2);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.release-notes-formatter__options input {
+  flex: 0 0 auto;
+  width: 17px;
+  height: 17px;
+  margin: 2px 0 0;
+  accent-color: var(--vp-c-brand-1);
+}
+
+.release-notes-formatter__android-option {
+  display: grid;
+  gap: 10px;
+}
+
+.release-notes-formatter__android-controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 280px));
+  gap: 12px;
+  padding: 2px 0 2px 26px;
+}
+
+.release-notes-formatter__android-controls label {
+  display: grid;
+  gap: 6px;
+  color: var(--vp-c-text-1);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.release-notes-formatter__android-controls input {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+  padding: 11px 13px;
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-1);
+  font: inherit;
+  font-weight: 400;
+}
+
+.release-notes-formatter__android-controls input:focus {
+  border-color: var(--vp-c-brand-1);
+  outline: 3px solid color-mix(in srgb, var(--vp-c-brand-1) 20%, transparent);
+}
+
+.release-notes-formatter__updates {
+  display: grid;
+  gap: 12px;
+  margin: 4px 0 0;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+  padding: 12px 14px 14px;
+}
+
+.release-notes-formatter__updates legend {
+  padding: 0 5px;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.release-notes-formatter__updates > p {
+  margin: -2px 0 0;
+  color: var(--vp-c-text-2);
+  font-size: 0.78rem;
+}
+
+.release-notes-formatter__platform-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 390px), 1fr));
+  gap: 10px;
+}
+
+.release-notes-formatter__platform {
+  display: grid;
+  grid-template-columns: minmax(130px, 1fr) auto auto;
+  align-items: center;
+  gap: 8px 14px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 9px;
+  padding: 10px 12px;
+  background: var(--vp-c-bg-soft);
+}
+
+.release-notes-formatter__platform strong {
+  font-size: 0.8rem;
+}
+
+.release-notes-formatter__platform label {
+  white-space: nowrap;
+}
+
+.is-over-limit {
+  color: var(--vp-c-danger-1) !important;
+  font-weight: 700 !important;
+}
+
 .release-notes-formatter select,
 .release-notes-formatter__editor textarea {
   width: 100%;
@@ -1387,6 +1510,19 @@ input {
   .release-notes-formatter__template button,
   .release-notes-formatter__template small {
     grid-column: 1;
+  }
+
+  .release-notes-formatter__android-controls {
+    grid-template-columns: 1fr;
+    padding-left: 0;
+  }
+
+  .release-notes-formatter__platform {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .release-notes-formatter__platform strong {
+    grid-column: 1 / -1;
   }
 
   .release-notes-formatter__hint {
