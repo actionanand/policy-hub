@@ -301,6 +301,23 @@ export const apps: AppInfo[] = [
     documents: createDocuments('arflix')
   },
   {
+    id: 'office-orbit',
+    name: 'Office Orbit',
+    shortDescription:
+      'A personal work dashboard for logs, JIRAs, sprints, releases, and feedback.',
+    icon: '/apps/office-orbit/icon.png',
+    platform: 'android',
+    releasedToPlayStore: false,
+    webLinks: [
+      {
+        label: 'Open Office Orbit in browser',
+        url: 'https://actionanand.github.io/office-orbit'
+      }
+    ],
+    githubUrl: 'https://github.com/actionanand/office-orbit',
+    documents: createDocuments('office-orbit')
+  },
+  {
     id: 'office-pulse',
     name: 'Office Pulse',
     shortDescription:

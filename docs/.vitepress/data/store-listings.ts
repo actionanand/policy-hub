@@ -10,6 +10,7 @@ import birthdayBuddySource from '../../content/birthday-buddy/store-listing.md?r
 import click2chatSource from '../../content/click2chat/store-listing.md?raw'
 import arflixSource from '../../content/arflix/store-listing.md?raw'
 import officePulseSource from '../../content/office-pulse/store-listing.md?raw'
+import officeOrbitSource from '../../content/office-orbit/store-listing.md?raw'
 import personixSource from '../../content/personix/store-listing.md?raw'
 import expenzoSource from '../../content/expenzo/store-listing.md?raw'
 import arTamilJathagamSource from '../../content/ar-tamil-jathagam/store-listing.md?raw'
@@ -37,6 +38,7 @@ const listingSources: Record<string, string> = {
   click2chat: click2chatSource,
   arflix: arflixSource,
   'office-pulse': officePulseSource,
+  'office-orbit': officeOrbitSource,
   personix: personixSource,
   expenzo: expenzoSource,
   'ar-tamil-jathagam': arTamilJathagamSource,
