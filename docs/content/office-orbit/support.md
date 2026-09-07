@@ -13,4 +13,4 @@ Include the app version, Android or browser version, device model, affected scre
 - **PDF export fails:** retry with a smaller date range and choose an available Android save/share destination or browser download location.
 - **A work link will not open:** check the URL, network connection, and destination service availability.
 
-Office Orbit is not released on Google Play. Use the official browser version or project release channel supplied by the developer.
+Install Office Orbit from Google Play or use the official browser version hosted on GitHub Pages.
