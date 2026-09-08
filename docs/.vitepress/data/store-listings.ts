@@ -19,6 +19,7 @@ import scrollixSource from '../../content/scrollix/store-listing.md?raw'
 import arblogzSource from '../../content/arblogz/store-listing.md?raw'
 import artamizhsolaiSource from '../../content/artamizhsolai/store-listing.md?raw'
 import flowraSource from '../../content/flowra/store-listing.md?raw'
+import qurioSource from '../../content/qurio/store-listing.md?raw'
 
 export interface StoreListing {
   appId: string
@@ -46,7 +47,8 @@ const listingSources: Record<string, string> = {
   scrollix: scrollixSource,
   arblogz: arblogzSource,
   artamizhsolai: artamizhsolaiSource,
-  flowra: flowraSource
+  flowra: flowraSource,
+  qurio: qurioSource
 }
 
 function parseShortDescription(frontmatter: string, appId: string): string {

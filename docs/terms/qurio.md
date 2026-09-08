@@ -1,6 +1,6 @@
 ---
-title: Delete Office Orbit Data
-description: Official data-deletion instructions for Office Orbit.
+title: Qurio Terms and Conditions
+description: Official Terms and Conditions for Qurio.
 navbar: false
 sidebar: false
 aside: false
@@ -13,4 +13,4 @@ lastUpdated: false
 pageClass: standalone-policy
 ---
 
-<!--@include: ../content/office-orbit/data-deletion.md-->
+<!--@include: ../content/qurio/terms.md-->

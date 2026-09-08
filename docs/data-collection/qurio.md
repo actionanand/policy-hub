@@ -1,6 +1,6 @@
 ---
-title: Delete Office Orbit Data
-description: Official data-deletion instructions for Office Orbit.
+title: Qurio Data Collection
+description: Official Data Collection for Qurio.
 navbar: false
 sidebar: false
 aside: false
@@ -13,4 +13,4 @@ lastUpdated: false
 pageClass: standalone-policy
 ---
 
-<!--@include: ../content/office-orbit/data-deletion.md-->
+<!--@include: ../content/qurio/data-collection.md-->

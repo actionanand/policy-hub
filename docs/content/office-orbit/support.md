@@ -8,9 +8,9 @@ Include the app version, Android or browser version, device model, affected scre
 
 - **Sign-in fails:** confirm internet access, verify the password, and check that the Office Orbit API is available.
 - **An active session cannot be restored:** reconnect and sign in again if the session has expired or the API rejects it.
-- **PIN or biometric unlock fails:** use the PIN, confirm that Android has a supported enrolled biometric, or reset app storage if the PIN is forgotten. Clearing app storage also removes local settings and the saved session.
-- **Work data is missing:** refresh the screen and confirm that your account is authorized to view the relevant source records.
+- **PIN or biometric unlock fails:** use the PIN and confirm Android has a supported enrolled biometric. If the PIN is forgotten, clearing app storage removes the local lock, settings, and saved session.
+- **Work data is missing:** refresh the screen and confirm that you are authorized to view the relevant source records.
 - **PDF export fails:** retry with a smaller date range and choose an available Android save/share destination or browser download location.
-- **A work link will not open:** check the URL, network connection, and destination service availability.
+- **A work link will not open:** check the URL, connection, and destination service availability.
 
-Install Office Orbit from Google Play or use the official browser version hosted on GitHub Pages.
+Office Orbit is not released on Google Play. Use the official browser version or a project release supplied by the developer.

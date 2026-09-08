@@ -94,6 +94,25 @@ function createDocuments(appId: string): AppDocumentInfo[] {
 
 export const apps: AppInfo[] = [
   {
+    id: 'qurio',
+    name: 'Qurio',
+    shortDescription:
+      'Multilingual learning, quizzes, progress tracking, and exam preparation.',
+    icon: '/apps/qurio/icon.png',
+    platform: 'android',
+    releasedToPlayStore: true,
+    playStoreUrl:
+      'https://play.google.com/store/apps/details?id=com.actionanand.qurio.app',
+    webLinks: [
+      {
+        label: 'Open Qurio in browser',
+        url: 'https://actionanand.github.io/qurio/'
+      }
+    ],
+    githubUrl: 'https://github.com/actionanand/qurio',
+    documents: createDocuments('qurio')
+  },
+  {
     id: 'spendzo',
     name: 'Spendzo',
     shortDescription: 'A personal expense and budget-tracking application.',
@@ -307,9 +326,7 @@ export const apps: AppInfo[] = [
       'A personal work dashboard for logs, JIRAs, sprints, releases, and feedback.',
     icon: '/apps/office-orbit/icon.png',
     platform: 'android',
-    releasedToPlayStore: true,
-    playStoreUrl:
-      'https://play.google.com/store/apps/details?id=com.actionanand.qurio.app',
+    releasedToPlayStore: false,
     webLinks: [
       {
         label: 'Open Office Orbit in browser',

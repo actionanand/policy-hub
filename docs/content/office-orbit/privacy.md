@@ -9,15 +9,13 @@ Office Orbit is a personal work-management application developed by **Anand Raja
 
 Office Orbit does not include advertising, developer-operated analytics, or third-party tracking SDKs.
 
-## Information you provide
+## Sign-in information
 
-The sign-in screen accepts a username and password. The username exists to support the device or browser credential manager and is not sent by Office Orbit to its API. The password is sent over HTTPS to the configured authentication endpoint. Office Orbit does not store the plaintext password itself. Your browser, Android Autofill service, or Google Password Manager may offer to store credentials under that provider's settings and privacy terms.
-
-If you contact support, the developer receives the information you choose to include in the message.
+The sign-in screen accepts a username and password. The username supports the device or browser credential manager and is not sent by Office Orbit to its API. The password is sent over HTTPS to the configured authentication endpoint. Office Orbit does not store the plaintext password itself. A browser, Android Autofill service, or Google Password Manager may offer to store credentials under that provider's settings and privacy terms.
 
 ## Work information retrieved by the app
 
-After authentication, Office Orbit can retrieve work information from its API, including:
+After authentication, Office Orbit can retrieve:
 
 - Work-log dates, updates, categories, types, work modes, comments, issues, appraisal markers, and related company, team, project, JIRA, and sprint references
 - JIRA keys, summaries, statuses, tags, blockers, spillovers, demo details, projects, releases, and sprint relationships
@@ -31,19 +29,17 @@ This information may be workplace, confidential, or personal information. Access
 
 ## Local and device storage
 
-On the web, Office Orbit stores the authenticated session in browser session storage. It normally ends when that browser session is closed or when the session expires or is cleared. On Android, the session is stored using secure device storage so an active session can be restored.
+On the web, Office Orbit stores the authenticated session in browser session storage. On Android, the session is stored using secure device storage so an active session can be restored.
 
-Optional PIN protection stores a salted password-based verifier rather than the PIN in plaintext. On supported Android devices, optional biometric unlock uses Android's biometric system. Office Orbit does not receive or store fingerprint, face, or other biometric templates.
+Optional PIN protection stores a salted password-based verifier rather than the PIN in plaintext. On supported Android devices, optional biometric unlock uses Android's biometric system. Office Orbit does not receive or store biometric templates.
 
-Fetched work records and navigation state are cached in application memory to improve performance. The client clears this cache on sign-out, and it is not designed as persistent storage for the source work records.
+Fetched work records and navigation state are cached in application memory to improve performance. The client clears this cache on sign-out, and it is not designed as persistent storage for source work records. Theme and similar preferences may be stored locally on the device.
 
-Theme and similar browser-facing preferences may be stored locally on the device.
+## API processing
 
-## API and authentication processing
+Office Orbit connects to its API hosted on Cloudflare Workers. Authentication requests include the entered password. Authenticated requests include an access token and request parameters such as filters, date ranges, pagination cursors, and relationship options. The service also receives ordinary connection information such as IP address, user agent, request time, and requested resource.
 
-Office Orbit connects to the configured Office Orbit API hosted on Cloudflare Workers. Authentication requests include the entered password. Authenticated requests include an access token and request parameters such as filters, date ranges, pagination cursors, and relationship options. The service also receives ordinary connection information such as IP address, user agent, request time, and requested resource.
-
-Cloudflare may process network and security information as the hosting provider under its own terms and privacy policy. The Office Orbit service operator can access information held by the API and its underlying work-data source according to that system's authorization and retention rules.
+Cloudflare may process network and security information as the hosting provider under its own terms and privacy policy. The API operator can access information held by the API and its underlying work-data source according to that system's authorization and retention rules.
 
 ## Web hosting and external links
 
@@ -53,32 +49,32 @@ When you open a work link or another external URL, the destination receives the 
 
 ## PDF exports
 
-Office Orbit can create PDF reports from selected work logs. Depending on your export choices, a report can contain dates, work updates, categories, types, work modes, comments, issues, appraisal markers, organization names, and JIRA references.
+Office Orbit can create PDF reports from selected work logs. Depending on your choices, a report can contain dates, work updates, categories, types, work modes, comments, issues, appraisal markers, organization names, and JIRA references.
 
-On the web, the report is downloaded through the browser. On Android, it is temporarily prepared in the app cache and passed to Android's save or share flow. Exported copies are readable outside Office Orbit and are controlled by the destination you select. Delete every saved or shared copy separately when it is no longer needed.
+On the web, the report is downloaded through the browser. On Android, it is temporarily prepared in the app cache and passed to Android's save or share flow. Exported copies are readable outside Office Orbit and controlled by the destination you select.
 
 ## Information collected by the developer
 
 Office Orbit has no developer-operated advertising, analytics, or telemetry endpoint. The developer does not automatically receive your locally stored session, PIN verifier, biometric data, in-memory cache, or exported files.
 
-The API operator receives authentication and data requests needed to provide the service. Support messages are retained as needed to answer the request and handle related support, privacy, or legal matters.
+The API operator receives authentication and data requests needed to provide the service. If you contact support, the developer receives the information you choose to include and retains it as needed to answer the request.
 
 ## Android permissions
 
 Office Orbit uses:
 
 - **Internet access** to authenticate and retrieve work information from the API
-- **Biometric authentication** only when you choose to enable biometric app unlock on a supported device
+- **Biometric authentication** only when you enable biometric app unlock on a supported device
 
 PDF saving and sharing uses Android's system flow. The reviewed app does not request location, contacts, phone, SMS, camera, microphone, call-log, notification, or broad storage permissions.
 
 ## Retention and deletion
 
-Signing out clears the locally stored Office Orbit session and in-memory data cache. Expired or invalid sessions are also discarded. Disabling PIN protection removes the local PIN and biometric preference.
+Signing out clears the locally stored session and in-memory data cache. Expired or invalid sessions are discarded. Disabling PIN protection removes the local PIN and biometric preference.
 
 You can remove all app-held Android data by clearing Office Orbit storage in Android settings or uninstalling the app. In a browser, close the browser session and clear the site's storage and cache.
 
-These actions do not delete work records held by the API or its underlying data source, support emails, or PDF files saved or shared elsewhere. Follow the data-deletion instructions for those records.
+These actions do not delete work records held by the API or its underlying data source, support emails, or PDF files saved or shared elsewhere.
 
 ## Workplace responsibility
 
