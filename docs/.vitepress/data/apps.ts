@@ -307,9 +307,7 @@ export const apps: AppInfo[] = [
       'A personal work dashboard for logs, JIRAs, sprints, releases, and feedback.',
     icon: '/apps/office-orbit/icon.png',
     platform: 'android',
-    releasedToPlayStore: true,
-    playStoreUrl:
-      'https://play.google.com/store/apps/details?id=com.actionanand.qurio.app',
+    releasedToPlayStore: false,
     webLinks: [
       {
         label: 'Open Office Orbit in browser',

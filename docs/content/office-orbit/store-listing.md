@@ -43,6 +43,6 @@ Device Security
 
 Web and Android
 
-Office Orbit is available on Google Play and in a browser hosted on GitHub Pages.
+Office Orbit is available in a browser and as an Android application distributed outside Google Play. The browser version is hosted on GitHub Pages.
 
 Office Orbit contains no advertisements or developer-operated analytics. It requires authenticated access to the configured Office Orbit API and is intended only for users authorized to view the connected work records.
