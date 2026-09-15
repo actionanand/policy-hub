@@ -29,8 +29,8 @@ Prepare for Exams
 Progress Across Devices
 
 • Sign in with a verified account
-• Synchronize lessons, attempts, preferences, and exam-plan progress
-• Keep recent progress cached locally
+• Store lessons, attempts, preferences, bookmarks, and exam-plan progress in your account's secure Supabase SQL database
+• Keep only a temporary recent-progress cache on the device
 • Reset your password securely by email
 
 Practice Reminders
