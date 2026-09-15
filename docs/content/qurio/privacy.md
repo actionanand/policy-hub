@@ -1,7 +1,7 @@
 # Privacy Policy for Qurio
 
 **Effective Date:** September 8, 2026  
-**Last Updated:** September 8, 2026
+**Last Updated:** September 16, 2026
 
 ## Overview
 
@@ -24,7 +24,7 @@ Qurio stores account-linked learning information including:
 - Quiz identifiers, selected and correct answers, hint use, time spent, scores, pass results, and attempt timestamps
 - Exam-plan dates, task identifiers and types, and completion status
 
-Database Row Level Security restricts learners to their own learner-state records.
+For approved accounts, this is the canonical record in Qurio's hosted Supabase PostgreSQL (SQL) database. Database Row Level Security restricts learners to their own learner-state records.
 
 ## Administration and audit records
 
@@ -32,19 +32,19 @@ Authorized owners and administrators can manage verification, approval, account 
 
 ## Device and browser storage
 
-Qurio stores preferences, cached progress, quiz history, exam progress, reminder settings, and notification-prompt state locally. Supabase maintains the authenticated session.
+Qurio keeps limited information on the device or browser so the app can operate: the authenticated session, display preferences, temporary synchronization cache, notification-permission state, and reminder schedule. The device cache is not the canonical account record; approved users' preferences, learning progress, quiz attempts and answers, bookmarks, and exam-plan progress are stored in the Supabase SQL database.
 
-Optional app locking stores a salted, password-derived PIN verifier in IndexedDB. The web app does not store the PIN in plaintext. Optional Android biometric unlock stores an encrypted PIN secret protected by Android Keystore. Android performs biometric matching; Qurio never receives fingerprint or face templates.
+Optional web app locking stores a salted, password-derived PIN verifier in IndexedDB. The web app does not store the PIN in plaintext. Optional Android biometric unlock stores only random unlock material protected by Android Keystore; it does not store the PIN. Android performs biometric matching; Qurio never receives fingerprint or face templates.
 
 ## Notifications
 
-If you enable Android practice reminders, Qurio asks for notification permission, stores selected days and time locally, and schedules local notifications. Boot-completed, time-change, and timezone-change events restore enabled schedules after restarts or clock changes.
+If you enable Android practice reminders, Qurio asks for notification permission, saves your selected days and time to your account settings in the Supabase SQL database, and schedules local notifications on the device. Boot-completed, time-change, and timezone-change events restore enabled schedules after restarts or clock changes.
 
 No push token is uploaded. Reminders contain no quiz answers, scores, or sensitive learning details. You can disable reminders in Qurio and revoke permission in Android settings.
 
 ## Service providers
 
-Qurio uses **Supabase** for authentication, profiles, authorization, learner state, settings, and audit records; a configured authentication email provider for verification and reset emails; **GitHub Pages** for the web client; and **GitHub raw-content delivery** for learning files. These services process necessary data and ordinary connection metadata such as IP address, user agent, request time, and requested resource under their own policies.
+Qurio uses **Supabase**, including Supabase Authentication and its hosted PostgreSQL (SQL) database, for authentication, profiles, authorization, learner state, settings, and audit records; a configured authentication email provider for verification and reset emails; **GitHub Pages** for the web client; and **GitHub raw-content delivery** for learning files. These services process necessary data and ordinary connection metadata such as IP address, user agent, request time, and requested resource under their own policies.
 
 ## Android permissions
 
@@ -59,7 +59,7 @@ Qurio does not request location, contacts, phone, SMS, call logs, camera, microp
 
 ## Retention and deletion
 
-Account and learning records remain while needed to provide Qurio. Signing out ends the local session but does not delete server data. Local information remains until cleared through the browser or Android settings.
+Account and learning records in the Supabase SQL database remain while needed to provide Qurio. Signing out ends the local session but does not delete server data. Device and browser information remains until cleared through the browser or Android settings.
 
 Deleting an authentication account is designed to delete its linked profile and learner-state records. Limited audit or support records may remain for security, disputes, legal duties, and accountability. See the Data Deletion page.
 
