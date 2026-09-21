@@ -1,17 +1,19 @@
 # Delete Qurio Data
 
-## Request account deletion
+## Delete your account in Qurio
 
-Email **anand.official.in@gmail.com** from your registered address with the subject **Qurio account deletion request** and your registered display name. Reasonable verification may be requested to prevent unauthorized deletion. A parent or guardian may request deletion of a child's account and should explain their relationship to the learner.
+Open **Settings**, select **Delete my account**, and enter the email address of the currently signed-in account to confirm permanent deletion. This action is available to Learner and Administrator accounts. Owner accounts cannot be self-deleted while they own Qurio; ownership must be transferred first.
 
-An authorized owner or administrator can delete the authentication account. Linked profile, account settings, study progress, quiz attempts and answers, bookmarks, and exam-plan progress in the Supabase SQL database are designed to be deleted through database relationships.
+The deletion request is authenticated and can delete only the currently signed-in account. It permanently deletes the Qurio Authentication account and its linked profile, account settings, learning progress, quiz attempts and answers, bookmarks, and exam-plan progress from the Supabase SQL database. Qurio also clears the deleted account's active local session and app-lock data from the installation that performs the deletion.
 
-Limited audit records may retain identifiers, actions, reasons, and timestamps for security, abuse prevention, disputes, legal duties, and accountability. Necessary support correspondence may also remain. Requests are handled within the period required by applicable law.
+## What may remain
 
-## Remove local data
+Minimal audit records may remain for security, abuse prevention, disputes, legal duties, and accountability. These records can include identifiers, actions, reasons, and timestamps. Support correspondence is separate from account data and may remain until it is deleted from the support mailbox.
 
-Signing out ends the session but does not delete cloud account data in the Supabase SQL database. Clear the Qurio site's storage and cookies in your browser. On Android, clear Qurio storage in system settings or uninstall it. This removes local session data, preferences, temporary cache, PIN verifier, Android Keystore-protected unlock material, notification-permission state, and scheduled reminders from that installation; it does not delete the cloud account record.
+A parent or guardian may request help deleting a child's account by emailing **anand.official.in@gmail.com**. For support-correspondence deletion, email the same address from the address used for the original message.
+
+## Remove local device data
+
+Signing out only ends the session; it does not delete cloud account data. To remove local data without deleting an account, clear Qurio site storage and cookies in your browser. On Android, clear Qurio storage in system settings or uninstall it. This removes local session data, preferences, temporary cache, PIN verifier, Android Keystore-protected unlock material, notification-permission state, and scheduled reminders from that installation.
 
 Disable reminders in Qurio and optionally revoke notification permission in Android settings.
-
-To request deletion of support correspondence, email the same address from the address used for the original message.
