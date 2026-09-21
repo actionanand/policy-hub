@@ -1,6 +1,6 @@
 # Qurio Data Collection
 
-**Last reviewed:** September 16, 2026
+**Last reviewed:** September 22, 2026
 
 ## Information processed
 
@@ -13,6 +13,12 @@ For approved accounts, Qurio stores language, theme, curriculum, grade, selected
 The app may keep a local authenticated session, display preferences, and a temporary synchronization cache. Local data supports the installation but is not the canonical account record. Optional web PIN protection stores a salted password-derived verifier in IndexedDB. Android biometric unlock uses random unlock material protected by Android Keystore and does not store the PIN; Qurio does not collect biometric templates.
 
 Enabled reminder days and time are saved to account settings in the Supabase SQL database so they can be restored for that account. The notification-permission state and scheduled notification remain on the Android device. No push-notification token is uploaded.
+
+## Account deletion
+
+Learner and Administrator accounts can be permanently deleted in Qurio Settings after confirming the signed-in email address. Deletion removes the authenticated account and its linked profile, account settings, learning records, quiz attempts and answers, bookmarks, and exam-plan progress. The current installation also clears the deleted account's active session and app-lock data. Owner accounts cannot self-delete until ownership is transferred.
+
+Minimal audit records and support correspondence may remain where necessary for security, legal duties, disputes, or accountability.
 
 ## Providers
 

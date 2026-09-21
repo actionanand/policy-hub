@@ -1,7 +1,7 @@
 # Privacy Policy for Qurio
 
 **Effective Date:** September 8, 2026  
-**Last Updated:** September 16, 2026
+**Last Updated:** September 22, 2026
 
 ## Overview
 
@@ -61,7 +61,9 @@ Qurio does not request location, contacts, phone, SMS, call logs, camera, microp
 
 Account and learning records in the Supabase SQL database remain while needed to provide Qurio. Signing out ends the local session but does not delete server data. Device and browser information remains until cleared through the browser or Android settings.
 
-Deleting an authentication account is designed to delete its linked profile and learner-state records. Limited audit or support records may remain for security, disputes, legal duties, and accountability. See the Data Deletion page.
+You can permanently delete your own Learner or Administrator account in **Settings** by confirming the current account email. The authenticated deletion removes the Auth account and linked profile, settings, learner-state records, quiz attempts and answers, bookmarks, and exam-plan progress. It also clears the deleted account's active local session and app-lock data on the installation that submits the deletion. Owner self-deletion is blocked until ownership is transferred.
+
+Minimal audit records and support correspondence may remain where necessary for security, disputes, legal duties, or accountability. See the Data Deletion page.
 
 ## Children and families
 
