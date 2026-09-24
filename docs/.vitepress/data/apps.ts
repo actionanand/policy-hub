@@ -94,6 +94,19 @@ function createDocuments(appId: string): AppDocumentInfo[] {
 
 export const apps: AppInfo[] = [
   {
+    id: 'local-tell',
+    name: 'LocalTell',
+    shortDescription:
+      'Offline approximate-area lookup from your serving cellular network.',
+    icon: '/apps/local-tell/icon.png',
+    platform: 'android',
+    releasedToPlayStore: true,
+    playStoreUrl:
+      'https://play.google.com/store/apps/details?id=com.actionanand.localtell.app',
+    githubUrl: 'https://github.com/actionanand/local-tell',
+    documents: createDocuments('local-tell')
+  },
+  {
     id: 'qurio',
     name: 'Qurio',
     shortDescription:
