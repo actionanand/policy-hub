@@ -1,4 +1,5 @@
 import { apps } from './apps'
+import localTellSource from '../../content/local-tell/store-listing.md?raw'
 import spendzoSource from '../../content/spendzo/store-listing.md?raw'
 import stilloraSource from '../../content/stillora/store-listing.md?raw'
 import vaultNestSource from '../../content/vault-nest/store-listing.md?raw'
@@ -28,6 +29,7 @@ export interface StoreListing {
 }
 
 const listingSources: Record<string, string> = {
+  'local-tell': localTellSource,
   spendzo: spendzoSource,
   stillora: stilloraSource,
   'vault-nest': vaultNestSource,
