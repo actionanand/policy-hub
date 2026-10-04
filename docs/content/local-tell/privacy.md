@@ -5,19 +5,19 @@
 
 ## Overview
 
-LocalTell is an offline-first Android app developed by **Anand Raja**. It uses serving cellular network identifiers and, when needed, a short on-device GNSS location fix to resolve a locality from an offline data pack installed on your device. It has no account, advertising, analytics, tracking, or developer-operated cloud service.
+LocalTell is an offline-first Android app developed by **Anand Raja**. It uses an on-device GNSS location fix to resolve a locality from an offline geographic data pack installed on your device, and provides cellular diagnostics from information Android reports. It has no account, advertising, analytics, developer-operated tracking, or developer-operated cloud service.
 
 ## Information processed on your device
 
-After you grant Android's location permission, LocalTell can read registered serving-cell information supplied by Android: radio technology, mobile country code, mobile network code, area code, cell identifier, and signal strength. It processes this information locally. When a locality needs to be resolved, LocalTell can request one short GNSS fix from the Android GPS provider and use that coordinate only on the device with a downloaded offline SQLite pack.
+After you grant Android's location permission, LocalTell can read registered serving-cell information supplied by Android: radio technology, mobile country code, mobile network code, area code, cell identifier, and signal strength. It processes this information locally for diagnostics. To resolve a Home locality, LocalTell requests one short GNSS fix from the Android GPS provider and uses that coordinate only on the device with a downloaded offline SQLite pack.
 
-LocalTell does not continuously track your location or upload GNSS coordinates. The Easy screen requests a GNSS fix only when you choose **Get my location**. It can locally create and decode LocalTell location codes; these codes represent a coordinate but are not stored in a developer service.
+LocalTell does not upload GNSS coordinates. The Easy screen requests a GNSS fix only when you choose **Get my location**. It can locally create and decode LocalTell location codes; these codes represent a coordinate but are not stored in a developer service. Optional Journey mode requests periodic GNSS fixes only while you have explicitly started its foreground service, and stores a local history only when the resolved locality changes.
 
-If you use Journey mode, LocalTell stores a local history of approximate-area matches. An entry includes its timestamp, approximate area, optional district and state, radio technology, network code, cell identifier, and confidence. Offline pack preferences and installed-pack metadata are also kept in app-private storage.
+If you use Journey mode, LocalTell stores a local history of resolved localities. An entry includes its timestamp, locality, optional district and state, radio technology, network code, cell identifier, and confidence. Offline pack preferences and installed-pack metadata are also kept in app-private storage.
 
 ## Network use and offline packs
 
-Internet access is used only to retrieve the published offline-pack manifest, download a pack you choose, and periodically check for pack updates. Pack URLs use HTTPS and downloaded packs are checked before use. Serving-cell data, Journey history, and approximate-area results are not sent to the developer as part of these requests.
+Internet access is used only to retrieve the published offline-pack manifest, download a pack you choose, and periodically check for pack updates. Pack URLs use HTTPS and downloaded packs are checked before use. Serving-cell data, Journey history, GNSS coordinates, and locality results are not sent to the developer as part of these requests.
 
 ## Permissions
 
@@ -28,7 +28,7 @@ LocalTell may use the following Android permissions:
 - Foreground-service and foreground-service-location permissions for optional Journey mode, which periodically checks the serving cellular network while you have started the service.
 - Notification permission on Android versions that require it, only to show the ongoing Journey foreground-service notification.
 
-You can deny or revoke permissions in Android settings. Without location permission, LocalTell cannot read cell identifiers or resolve an approximate area. Journey mode requires cell access and, where applicable, notification permission.
+You can deny or revoke permissions in Android settings. Without location permission, LocalTell cannot read cell identifiers or resolve a locality. Journey mode requires location access and, where applicable, notification permission.
 
 ## Sharing and external services
 
