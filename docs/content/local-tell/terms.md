@@ -5,11 +5,11 @@
 
 ## Use of LocalTell
 
-LocalTell provides an offline locality result using serving cellular information and, when needed, a short on-device GNSS fix. Easy can create or decode a location code representing a coordinate. It is an informational tool only. You are responsible for deciding whether a result is suitable for your purpose.
+LocalTell provides an offline locality result from a short on-device GNSS fix and a downloaded geographic pack. Cellular information is provided for diagnostics. Easy can create or decode a location code representing a coordinate. It is an informational tool only. You are responsible for deciding whether a result is suitable for your purpose.
 
 ## No guarantee of accuracy
 
-Cellular locality results can be incomplete, outdated, unavailable, or incorrect. A LocalTell code reproduces an encoded coordinate but cannot improve the accuracy of the original GNSS fix. Do not rely on LocalTell for emergency response, navigation, safety decisions, legal evidence, or any situation requiring exact or current location information.
+GNSS, geographic-pack, and cellular diagnostics results can be incomplete, outdated, unavailable, or incorrect. A LocalTell code reproduces an encoded coordinate but cannot improve the accuracy of the original GNSS fix. Do not rely on LocalTell for emergency response, navigation, safety decisions, legal evidence, or any situation requiring exact or current location information.
 
 ## Journey mode and sharing
 
