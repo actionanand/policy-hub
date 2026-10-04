@@ -1,17 +1,17 @@
 # Privacy Policy for LocalTell
 
 **Effective Date:** September 24, 2026  
-**Last Updated:** September 24, 2026
+**Last Updated:** October 4, 2026
 
 ## Overview
 
-LocalTell is an offline-first Android app developed by **Anand Raja**. It uses serving cellular network identifiers to estimate an approximate locality from an offline data pack installed on your device. It has no account, advertising, analytics, tracking, or developer-operated cloud service.
+LocalTell is an offline-first Android app developed by **Anand Raja**. It uses serving cellular network identifiers and, when needed, a short on-device GNSS location fix to resolve a locality from an offline data pack installed on your device. It has no account, advertising, analytics, tracking, or developer-operated cloud service.
 
 ## Information processed on your device
 
-After you grant Android's location permission, LocalTell can read registered serving-cell information supplied by Android: radio technology, mobile country code, mobile network code, area code, cell identifier, and signal strength. It uses this information locally to match an approximate area in a downloaded offline SQLite pack.
+After you grant Android's location permission, LocalTell can read registered serving-cell information supplied by Android: radio technology, mobile country code, mobile network code, area code, cell identifier, and signal strength. It processes this information locally. When a locality needs to be resolved, LocalTell can request one short GNSS fix from the Android GPS provider and use that coordinate only on the device with a downloaded offline SQLite pack.
 
-LocalTell does not request or read GPS coordinates. Android treats access to cell identifiers as location-sensitive, which is why Android requires location permission before it exposes this information.
+LocalTell does not continuously track your location or upload GNSS coordinates. The Easy screen requests a GNSS fix only when you choose **Get my location**. It can locally create and decode LocalTell location codes; these codes represent a coordinate but are not stored in a developer service.
 
 If you use Journey mode, LocalTell stores a local history of approximate-area matches. An entry includes its timestamp, approximate area, optional district and state, radio technology, network code, cell identifier, and confidence. Offline pack preferences and installed-pack metadata are also kept in app-private storage.
 
@@ -23,7 +23,7 @@ Internet access is used only to retrieve the published offline-pack manifest, do
 
 LocalTell may use the following Android permissions:
 
-- Precise and approximate location permission, only so Android can provide serving cellular identifiers; LocalTell does not obtain GPS coordinates.
+- Precise and approximate location permission so Android can provide serving cellular identifiers and, when you request it, one short on-device GNSS fix for locality resolution or Easy location sharing.
 - Internet permission for optional offline-pack downloads and update checks.
 - Foreground-service and foreground-service-location permissions for optional Journey mode, which periodically checks the serving cellular network while you have started the service.
 - Notification permission on Android versions that require it, only to show the ongoing Journey foreground-service notification.
@@ -32,7 +32,7 @@ You can deny or revoke permissions in Android settings. Without location permiss
 
 ## Sharing and external services
 
-When you choose Share, LocalTell places a sentence containing the approximate area result into the Android share sheet. The app or service you select handles that text under its own privacy policy. LocalTell does not automatically share results.
+When you choose Share, Open in Google Maps, Uber, Ola, or Rapido, LocalTell passes the selected location information to the Android app or service you choose. Easy sharing can include the coordinate, LocalTell codes, and a Google Maps link. Ola and Rapido copy the destination before opening their apps. Those external destinations handle the information under their own privacy policies. LocalTell does not automatically share or upload results.
 
 ## Retention and deletion
 
