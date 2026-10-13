@@ -126,6 +126,25 @@ export const apps: AppInfo[] = [
     documents: createDocuments('qurio')
   },
   {
+    id: 'metro-pocket',
+    name: 'MetroPocket',
+    shortDescription:
+      'Offline metro routes and TV channel lookup with downloadable data packs.',
+    icon: '/apps/metro-pocket/icon.png',
+    platform: 'android',
+    releasedToPlayStore: true,
+    playStoreUrl:
+      'https://play.google.com/store/apps/details?id=com.actionanand.metropocket.app',
+    webLinks: [
+      {
+        label: 'Open MetroPocket in browser',
+        url: 'https://actionanand.github.io/metro-pocket'
+      }
+    ],
+    githubUrl: 'https://github.com/actionanand/metro-pocket',
+    documents: createDocuments('metro-pocket')
+  },
+  {
     id: 'spendzo',
     name: 'Spendzo',
     shortDescription: 'A personal expense and budget-tracking application.',

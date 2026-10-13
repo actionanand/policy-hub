@@ -21,6 +21,7 @@ import arblogzSource from '../../content/arblogz/store-listing.md?raw'
 import artamizhsolaiSource from '../../content/artamizhsolai/store-listing.md?raw'
 import flowraSource from '../../content/flowra/store-listing.md?raw'
 import qurioSource from '../../content/qurio/store-listing.md?raw'
+import metroPocketSource from '../../content/metro-pocket/store-listing.md?raw'
 
 export interface StoreListing {
   appId: string
@@ -50,7 +51,8 @@ const listingSources: Record<string, string> = {
   arblogz: arblogzSource,
   artamizhsolai: artamizhsolaiSource,
   flowra: flowraSource,
-  qurio: qurioSource
+  qurio: qurioSource,
+  'metro-pocket': metroPocketSource
 }
 
 function parseShortDescription(frontmatter: string, appId: string): string {
