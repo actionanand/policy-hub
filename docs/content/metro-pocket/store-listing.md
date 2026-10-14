@@ -1,8 +1,8 @@
 ---
-shortDescription: Offline metro routes and TV channel lookup with downloadable data packs.
+shortDescription: Offline metro routes, TV channels, and personal train schedules.
 ---
 
-MetroPocket helps you explore metro routes and look up TV channels using downloadable data packs.
+MetroPocket helps you explore metro routes, look up TV channels, and keep personal train schedules available offline.
 
 Plan a metro journey
 
@@ -21,6 +21,14 @@ Manage offline data
 • See available packs in the Offline Data screen
 • Download the packs you want and check for updates
 • Remove a pack when you no longer need it
+
+Keep train schedules
+
+• On the web, import one train schedule from a CSV file
+• Search saved schedules and station timings offline
+• Export or restore your complete Train database as a local backup
+
+Train schedules and backups stay under your control on your device. MetroPocket does not use a railway API, upload schedules, or provide live train tracking.
 
 MetroPocket is available on Android and the web. Its offline features require the relevant packs to be installed first. Internet access is needed for the initial web load and optional pack downloads or updates.
 

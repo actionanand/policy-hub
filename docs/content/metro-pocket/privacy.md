@@ -1,15 +1,17 @@
 # Privacy Policy for MetroPocket
 
 **Effective Date:** October 13, 2026  
-**Last Updated:** October 13, 2026
+**Last Updated:** October 14, 2026
 
 ## Overview
 
-MetroPocket is an offline-first metro route and TV channel reference app developed by **Anand Raja**. It is available for Android and the web. It has no account, advertising, developer-operated analytics, tracking SDK, or developer-operated cloud database.
+MetroPocket is an offline-first metro route, TV channel, and personal train-schedule reference app developed by **Anand Raja**. It is available for Android and the web. It has no account, advertising, developer-operated analytics, tracking SDK, or developer-operated cloud database.
 
 ## Information kept on your device
 
-MetroPocket stores downloaded data packs and their metadata in app-private browser/WebView storage. These packs supply metro network and TV channel information for offline use. A theme preference may be stored locally. Route choices and searches are processed locally; they are not sent to the developer.
+MetroPocket stores downloaded data packs and their metadata in app-private browser/WebView storage. These packs supply metro network and TV channel information for offline use. A theme preference may be stored locally. Route choices, searches, and saved train schedules are processed locally; they are not sent to the developer.
+
+On Web/PWA, you may import a train schedule CSV. Train schedules are stored in a separate private SQLite database on your device. On Web/PWA and Android, you may export or restore that database as a user-controlled local backup file. The app does not upload those CSV files, schedules, or backups to the developer or a cloud service.
 
 On the web, a service worker may cache app files so the app can open after a prior load. Your browser may remove cached files or stored packs under its storage rules. Android backup and device transfer are disabled for the app's private data.
 
@@ -27,7 +29,7 @@ If you email support, the developer receives the information you choose to inclu
 
 ## Retention and deletion
 
-Installed packs and local preferences remain until you remove them, clear the app's storage, or uninstall the app. You can remove individual packs in **Offline Data**. For all web data, clear MetroPocket's site data in your browser. For all Android data, clear MetroPocket's app storage in Android settings or uninstall it. The developer has no account or cloud copy of your locally stored app data to delete. To request deletion of support correspondence, email the contact below.
+Installed packs, local preferences, and saved train schedules remain until you remove them, clear the app's storage, or uninstall the app. You can remove individual packs in **Offline Data** and delete all saved train schedules in **Settings → Train Data**. For all web data, clear MetroPocket's site data in your browser. For all Android data, clear MetroPocket's app storage in Android settings or uninstall it. Exported Train backup files remain where you chose to save them and must be deleted from that location separately. The developer has no account or cloud copy of your locally stored app data to delete. To request deletion of support correspondence, email the contact below.
 
 ## Children and changes
 
