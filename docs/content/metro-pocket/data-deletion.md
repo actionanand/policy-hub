@@ -6,9 +6,13 @@ MetroPocket has no online account or developer-operated cloud database. App data
 
 Open **Offline Data** in MetroPocket and remove the installed pack you no longer want. This deletes that pack's local copy and metadata.
 
+## Remove saved train schedules
+
+Open **Settings → Train Data** and choose **Delete All Train Data** to remove every saved train schedule from the app. This does not remove Metro or TV packs. A Train backup exported outside the app remains in the location you chose until you delete that file separately.
+
 ## Remove all local data
 
 - **Android:** Clear MetroPocket's storage in Android settings or uninstall the app. Android backup and device transfer are disabled for its private data.
-- **Web/PWA:** Clear site data for the MetroPocket website in your browser. This removes stored packs, preferences, and cached app files. Uninstalling a PWA shortcut alone may not clear browser site data.
+- **Web/PWA:** Clear site data for the MetroPocket website in your browser. This removes stored packs, preferences, train schedules, and cached app files. Uninstalling a PWA shortcut alone may not clear browser site data.
 
 Your browser may also evict stored data automatically. Removing local data does not delete support emails you sent. To request deletion of support correspondence held by the developer, email [anand.official.in@gmail.com](mailto:anand.official.in@gmail.com). The developer cannot remotely delete data that remains only on your device.
