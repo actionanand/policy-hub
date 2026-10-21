@@ -21,4 +21,10 @@ unredacted financial records, `.cnbak` files, or exported reports.
   and notification settings. Always verify due dates with the issuer.
 - **Receipt capture fails:** grant camera permission for new photos or use the
   system photo picker for an existing image.
+- **SMS Sync is unavailable or permission was denied:** SMS Sync is optional
+  and available only on supported Android distributions. Start it from SMS
+  Review or its sync control, then allow both Android SMS permissions if you
+  want inbox-based review. You can revoke access in Android settings, turn the
+  feature off at any time, or paste a financial SMS for local parsing without
+  inbox permission.
 - **Report export fails:** choose an available writable destination and retry.

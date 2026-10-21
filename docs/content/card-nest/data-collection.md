@@ -1,6 +1,6 @@
 # Card Nest Data Collection
 
-**Last reviewed:** August 1, 2026
+**Last reviewed:** October 22, 2026
 
 ## Data stored locally
 
@@ -32,11 +32,35 @@ include in that message.
 - The camera and system photo picker provide receipt images only after your
   action and permission or selection.
 
+## Optional Android SMS Review data
+
+If you deliberately enable SMS Sync, Card Nest uses `READ_SMS` to examine the
+SMS inbox within the history range you select and `RECEIVE_SMS` to schedule
+processing after a new message arrives. It uses these permissions only to find
+financial transaction alerts and create review suggestions. It does not send
+SMS, access call logs or contacts, use SMS for advertising or analytics, or
+automatically add a transaction or make a payment.
+
+Processing is on-device. The separate SMS Sync queue stores an encrypted
+extracted review record and a deduplication identity using an Android
+Keystore-backed AES-GCM key. Raw SMS bodies, senders, OTPs, and marketing
+messages are not retained in that queue. The developer does not receive SMS
+contents or data derived from them. You must explicitly approve any suggestion
+before it becomes a financial record.
+
+You can turn SMS Sync off to stop future discovery and scheduling, revoke the
+permission in Android settings, or use **Delete all data** to clear SMS Sync
+settings and its encrypted queue. You can also paste a financial SMS for local
+parsing without granting inbox access.
+
 ## Permissions
 
-Camera, selected photos, notifications, biometrics, file access, and internet
-access are used only for their corresponding features. The reviewed app does
-not require location, contacts, phone, SMS, or broad gallery access.
+Camera, selected photos, notifications, biometrics, file access, internet, and
+optional SMS permissions are used only for their corresponding features. Card
+Nest does not require location, contacts, phone, call-log, or broad gallery
+access. SMS permissions are restricted by Google Play and are available only
+where the app's distribution eligibility and required Play Console declaration
+or approval permit them.
 
 ## Contact
 

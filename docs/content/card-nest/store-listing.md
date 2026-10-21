@@ -22,6 +22,15 @@ Track Spending and Payments
 • Add notes, tax details, monthly repeats, and receipt images
 • Review card balances, payment activity, and statement cycles
 
+Optional Android SMS Review
+
+• Where available, choose SMS Sync to create private review suggestions from
+  financial transaction-alert SMS messages
+• SMS access is requested only after you start this optional feature; Card Nest
+  never sends SMS or makes payment or transaction changes automatically
+• Review and approve each suggestion yourself, disable SMS Sync any time, or
+  paste a financial SMS for local parsing without inbox access
+
 Plan Budgets and Commitments
 
 • Set income and overall budgets for flexible monthly cycles
