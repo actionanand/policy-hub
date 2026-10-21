@@ -19,7 +19,15 @@ period, and select **Clean older data**. Review and confirm the deletion.
 Open **Settings → Backup & data → Delete all data**, review the warning, and
 confirm. If an application PIN exists, authorize the action using the PIN or an
 enabled Android biometric. This removes the Card Nest database and settings
-stored by the app.
+stored by the app. It also disables SMS Sync and clears its app-private,
+encrypted SMS review queue and SMS Sync settings.
+
+Turning off SMS Sync stops future SMS discovery and scheduling, but does not
+revoke Android's SMS permission or remove transactions you have already
+approved. Revoke the permission from Android system settings if you no longer
+want Card Nest to access SMS. You can also use the app's retention controls to
+remove older extracted SMS review data while preserving minimal deduplication
+records that prevent an already handled message from being imported again.
 
 You can also clear Card Nest storage from Android system settings or uninstall
 the app.

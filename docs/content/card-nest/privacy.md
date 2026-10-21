@@ -1,7 +1,7 @@
 # Privacy Policy for Card Nest
 
 **Effective Date:** August 1, 2026  
-**Last Updated:** August 1, 2026
+**Last Updated:** October 22, 2026
 
 ## Overview
 
@@ -50,6 +50,48 @@ receipt images to transactions. Selected images are processed and stored
 locally with Card Nest data. Camera access occurs only when you choose the
 camera action and grant permission. The system photo picker provides access only
 to images you select.
+
+## Optional Android SMS Review
+
+On supported Android distributions, you may choose to turn on **SMS Sync** to
+review financial transaction alerts from your SMS inbox. Card Nest requests
+`READ_SMS` and `RECEIVE_SMS` only after you deliberately start this feature in
+SMS Review or turn on its sync control. It does not request SMS access at app
+launch, during ordinary navigation, or merely because the app returns to the
+foreground.
+
+`READ_SMS` lets Card Nest examine inbox messages within the history range you
+choose so it can identify financial alerts. `RECEIVE_SMS` lets Android notify
+the app about a newly received SMS so an opted-in, permission-granted sync can
+be scheduled. Card Nest uses this access only to provide its SMS-review feature.
+It does not send SMS messages, read call logs, access contacts, use SMS for
+advertising or analytics, or use messages to make payments.
+
+Financial alerts are turned into private review suggestions. Card Nest never
+adds a financial transaction, changes a balance, or initiates a payment merely
+because it finds an SMS. You must review and explicitly approve a suggestion
+before it can be added to your records. You may instead paste a financial SMS
+for local parsing without granting inbox access.
+
+SMS processing occurs on the device. The SMS queue is separate from the
+financial ledger database and uses an Android Keystore-backed AES-GCM key to
+encrypt extracted review data. It stores encrypted extracted data and a
+deduplication identity; it does not retain raw SMS bodies, senders, OTPs, or
+marketing messages in that queue. The developer does not receive SMS contents
+or data derived from them.
+
+You can turn off SMS Sync at any time. This immediately stops discovery and
+scheduling, while keeping already saved transactions and review progress. It
+does not revoke Android permission; you can revoke SMS access in Android system
+settings. **Delete all data** clears Card Nest's SMS Sync settings and encrypted
+queue along with its local database. Retention controls remove old extracted
+review data while keeping only the minimum tombstones needed to prevent a
+previously handled message from being imported again.
+
+SMS permissions are restricted by Google Play. Their availability depends on
+the app's distribution eligibility and any required Play Console declaration or
+approval. Where SMS Sync is unavailable, Card Nest's manual entry and pasted
+SMS flow remain available without inbox permission.
 
 ## Notifications
 
@@ -110,9 +152,10 @@ Depending on the features you use and Android version, Card Nest may use:
 - Android biometric authentication for optional app unlock
 - File or document access for backups and report exports
 - Internet access for Google-hosted font resources
+- `READ_SMS` and `RECEIVE_SMS` for the optional Android SMS Review feature
 
-The reviewed features do not require location, contacts, phone, SMS, or broad
-gallery access.
+Card Nest does not require location, contacts, phone, call-log, or broad gallery
+access. SMS access is optional and used only as described above.
 
 ## Retention and Deletion
 
