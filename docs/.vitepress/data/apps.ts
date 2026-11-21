@@ -94,6 +94,25 @@ function createDocuments(appId: string): AppDocumentInfo[] {
 
 export const apps: AppInfo[] = [
   {
+    id: 'radio-bee',
+    name: 'Radio Bee',
+    shortDescription:
+      'Discover and listen to live internet radio stations from around the world.',
+    icon: '/apps/radio-bee/icon.png',
+    platform: 'android',
+    releasedToPlayStore: true,
+    playStoreUrl:
+      'https://play.google.com/store/apps/details?id=com.actionanand.radiobee.app',
+    webLinks: [
+      {
+        label: 'Open Radio Bee in browser',
+        url: 'https://actionanand.github.io/radio-bee/'
+      }
+    ],
+    githubUrl: 'https://github.com/actionanand/radio-bee',
+    documents: createDocuments('radio-bee')
+  },
+  {
     id: 'local-tell',
     name: 'LocalTell',
     shortDescription:
